@@ -12,7 +12,7 @@ The PDF formula book includes:
   Linear equations, factoring, exponents, radicals, and more.
 
 - **Geometry:**  
-  Area, perimeter, volume, surface area formulas for 2D and 3D shapes.
+  Area, perimeter, volume, surface area formulas for shapes.
 
 - **Trigonometry:**  
   Trig identities, unit circle, right triangle relationships, sine/cosine laws.
