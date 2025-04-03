@@ -1,0 +1,3055 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{pdfpages} 
+
+%\usepackage{changepage} % can be used with \begin{adjustwidth}{0.2in}{0pt} and \end{adjustwidth}
+
+\setlength{\parskip}{0mm} 
+
+\fancyhf{}
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\geometry{letterpaper, portrait, left=0.85in, right=0.85in, top=0.75in, bottom=0.65in}
+
+\setlength\parindent{-0.2in}
+
+\linespread{1.6}
+
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\setlength{\parskip}{4mm}
+
+\begin{large}
+
+\newpage
+
+
+\begin{center}
+
+    
+    \Huge \textbf{Central Texas College} \\[10pt]
+    \Large \textbf{Mathematics Department} \\[30pt]
+    
+    % Title of the book
+    \Huge \textbf{Formula Book} \\[15pt]
+    \LARGE \textit{9th Edition} \\[40pt]
+    
+    % Author and Role
+    \Large \textbf{Prepared by:} \\[30pt]
+    \vspace{-0.5in}
+    \LARGE \textbf{Amanda Russell} \\[30pt]
+    \vspace{-0.5in}
+    \LARGE \textbf{Steven Burrow} \\[30pt]
+\end{center}
+
+
+\newpage
+
+\chead{ }
+
+\vspace*{\fill}
+
+\begin{center}\textbf{\Huge{ Contemporary Math }}\end{center}
+
+\vspace*{\fill}
+
+\newpage
+
+\chead{Contemporary}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 2 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{The Number of Subsets of a Set}
+
+\hspace{0.1in} A set of $n$ elements has $2^{n}$ subsets.
+
+\textbf{Proper Subsets}
+
+\hspace{0.1in} A set of $n$ elements has $2^{n}\ -\ 1$ proper subsets.
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 3 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Common English Expressions for p\ $\wedge$\ q}
+
+$ \begin{vmatrix}
+
+\underline{\text{Symbolic Statement}} & \underline{\text{English Statement}} \\
+
+\text{p}\ \wedge\ \text{q} & \text{p and q} \\
+
+\text{p}\ \wedge\ \text{q} & \text{p but q} \\
+
+\text{p}\ \wedge\ \text{q} & \text{p yet q} \\
+
+\text{p}\ \wedge\ \text{q} & \text{p nevertheless q} \\
+
+\end{vmatrix} $
+
+\vspace{0.2in}
+
+\textbf{Common English Expressions for p\ $\rightarrow$\ q}
+
+$ \begin{vmatrix}
+
+\underline{\text{Symbolic Statement}} & \underline{\text{English Statement}} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{If p then q} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{q if p} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{p is sufficient for q} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{q is necessary for p} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{p only if q} \\
+
+\text{p}\ \rightarrow\ \text{q} & \text{Only if q, p.} \\
+
+\end{vmatrix} $
+
+\vspace{1.5in}
+
+\textbf{Common English Expressions for p\ $\Leftrightarrow$\ q}
+
+$ \begin{vmatrix}
+
+\underline{\text{Symbolic Statement}} & \underline{\text{English Statement}} \\
+
+\text{p}\ \Leftrightarrow\ \text{q} & \text{p if and only if q} \\
+
+\text{p}\ \Leftrightarrow\ \text{q} & \text{q if and only if p} \\
+
+\text{p}\ \Leftrightarrow\ \text{q} & \text{If p then q, and if q then p.} \\
+
+\text{p}\ \Leftrightarrow\ \text{q} & \text{p is necessary and sufficient for q} \\
+
+\text{p}\ \Leftrightarrow\ \text{q} & \text{q is necessary and sufficient for p} \\
+
+\end{vmatrix} $
+
+\vspace{0.2in}
+
+\textbf{Using the Dominance of Connectives}
+
+$ \begin{vmatrix}
+
+\underline{\text{Statement}} & \underline{\text{Dominant Connective is Bold}} & \underline{\text{Statement with Grouping}} & \underline{\text{Type of Statement}} \\
+
+\text{p}\ \rightarrow\ \text{q}\ \wedge\ \sim\text{r} & \text{p}\ \boldsymbol{\rightarrow}\ \text{q}\ \wedge\ \sim\text{r} & \text{p}\ \rightarrow\ (\text{q}\ \wedge\ \sim\text{r}) & \text{Conditional} \\
+
+\text{p}\ \wedge\ \text{q}\ \rightarrow\ \sim\text{r} & \text{p}\ \wedge\ \text{q}\ \boldsymbol{\rightarrow}\ \sim\text{r} & (\text{p}\ \wedge\ \text{q})\ \rightarrow\ \sim\text{r} & \text{Conditional} \\
+
+\text{p}\ \Leftrightarrow\ \text{q}\ \rightarrow\ \text{r} & \text{p}\ \boldsymbol{\Leftrightarrow}\ \text{q}\ \rightarrow\ \text{r} & \text{p}\ \Leftrightarrow\ (\text{q}\ \rightarrow\ \text{r}) & \text{Biconditional} \\
+
+\text{p}\ \rightarrow\ \text{q}\ \Leftrightarrow\ \text{r} & \text{p}\ \rightarrow\ \text{q}\ \boldsymbol{\Leftrightarrow}\ \text{r} & (\text{p}\ \rightarrow\ \text{q})\ \Leftrightarrow\ \text{r} & \text{Biconditional} \\
+
+\text{p}\ \wedge\ \sim\text{q}\ \rightarrow\ \text{r}\ \vee\ \text{s} & \text{p}\ \wedge\ \sim\text{q}\ \boldsymbol{\rightarrow}\ \text{r}\ \vee\ \text{s} & (\text{p}\ \wedge\ \sim\text{q})\ \rightarrow\ (\text{r}\ \vee\ \text{s}) & \text{Conditional} \\
+
+\end{vmatrix} $
+
+\vspace{0.2in}
+
+\textbf{Variations of the Conditional Statement}
+
+$ \begin{vmatrix}
+
+\underline{\text{Name}} & \underline{\text{Symbolic Form}} \\
+
+\text{Conditional} & \text{p}\ \rightarrow\ \text{q} \\
+
+\text{Converse} & \text{q}\ \rightarrow\ \text{p} \\
+
+\text{Inverse} & \sim\text{p}\ \rightarrow\ \sim\text{q} \\
+
+\text{Contrapositive} & \sim\text{q}\ \rightarrow\ \sim\text{p} \\
+
+\end{vmatrix} $
+
+\vspace{0.2in}
+
+\textbf{Negation of a Conditional Statement}
+
+\hspace{0.1in} $\sim(\text{p}\ \rightarrow\ \text{q})\ =\ \text{p}\ \wedge\ \sim\text{q}$
+
+\textbf{De Morgan's Laws}
+
+\hspace{0.1in} 1.\ \ $\sim(\text{p}\ \wedge\ \text{q})\ =\ \sim\text{p}\ \vee\ \sim\text{q}$
+
+\hspace{0.1in} 2.\ \ $\sim(\text{p}\ \vee\ \text{q})\ =\ \sim\text{p}\ \wedge\ \sim\text{q}$
+
+%\vspace{0.25in}
+
+%\underline{\textbf{\huge Chapter 5 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+%\textbf{General Term $a_{n}$ of a Sequence}
+
+%\hspace{0.1in} $a_{n}\ =\ a_{1}\ +\ (n-1)\cdot d$
+
+%\textbf{General Term of Geometric Sequence}
+
+%\hspace{0.1in} $a_{n}\ =\ a_{1}(r)^{n-1}$
+
+%\textbf{Sum of a Finite Arithmetric Sequence}
+
+%\hspace{0.1in} The sum of a finite arithmetric sequence with $n$ terms is:
+
+%\hspace{0.2in} $S_{n}\ =\ \dfrac{n(a_{1}\ +\ a_{n})}{2}$
+
+%\textbf{Sum of a Finite Geometric Sequence}
+
+%\hspace{0.1in} The sum of a geometric sequence $a_{1},\ a_{1}r,\ a_{1}r^{2},\ a_{1}r^{3},\ \cdots\ ,\ a_{1}r^{n-1}$ with a common ratio $r\ \neq\ 1$ is:
+
+%\hspace{0.2in} $S_{n}\ =\ \dfrac{a_{1}(1\ -\ r^{n})}{1\ -\ r}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 8 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Finance}
+
+\hspace{0.1in} The percent formula, A = PB, mean A is P percent of B.
+
+\hspace{0.1in} Sales Tax Amount = Tax Rate $\times$ Item's Cost
+
+\hspace{0.1in} Discount Amount = Discount Rate $\times$ Original Price
+
+\hspace{0.1in} The fraction for percent increase (or decrease) is: $\dfrac{\text{amount of increase or decrease}}{\text{original amount}}$
+
+\textbf{Simple Interest}
+
+\hspace{0.1in} $I\ =\ Prt$,\ \ Simple interest $I$ when $P$ is the principle and $r$ is the annual rate for time $t$.
+
+\hspace{0.1in} $A\ =\ P(1\ +\ rt)$,\ \ The future value for simple interest.
+
+\textbf{Compound Interest}
+
+\hspace{2.5in} $A\ =\ P\left(1\ +\ \dfrac{r}{n}\right)^{nt}$
+
+\textbf{Continuous Compound Interest}
+
+\hspace{2.5in} $A\ =\ Pe^{rt}$
+
+\textbf{Present Value}
+
+\hspace{2.5in} $P\ =\ \dfrac{A}{\left(1\ +\ \dfrac{r}{n}\right)^{nt}}$
+
+\textbf{Effective Annual Yield}
+
+\hspace{2.5in} $Y\ =\ \left(1\ +\ \dfrac{r}{n}\right)^{n}\ -\ 1$
+
+\textbf{Sales Tax}
+
+\hspace{2.0in} Sales Tax = Tax Rate $\times$ Item Cost
+
+\vspace{0.5in}
+\textbf{Calculating Federal Income Tax}
+
+\hspace{0.1in} 1)\ Adjusted Gross Income = Gross Income $-$ Adjustments
+
+\hspace{0.1in} 2)\ Taxable Income = Adjusted Gross Income $-$ (Excemptions $+$ Deductions)
+
+\hspace{0.1in} 3)\ Income Tax = Tax Computation $-$ Tax Credits
+
+\textbf{Loan Payment Formula for Fixed Installment Loans}
+
+\hspace{1.5in} $PMT\ =\ \dfrac{P\left(\dfrac{r}{n}\right)}{1\ -\ \left(1\ +\ \dfrac{r}{n}\right)^{-nt}}$\hspace{0.2in} 
+
+\textbf{Credit Card Average Daily Balance}
+
+\hspace{0.1in} Credit Card Average Daily Balance = $\dfrac{\text{Sum of Unpaid Balances each day in Billing Period}}{\text{ Number of days in billing period}}$
+
+\textbf{Precent and Change}
+
+\hspace{0.1in} Percent Increase = $\dfrac{\text{amount of increase}}{\text{original amount}}$
+
+\hspace{0.1in} Percent Decrease = $\dfrac{\text{amount of decrease}}{\text{original amount}}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 10 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Area Formulas}
+
+\hspace{0.1in} Trapezoid
+
+\hspace{2.5in} $A\ =\ \dfrac{1}{2}h(b_{1}\ +\ b_{2})$
+
+\hspace{0.1in} Rectangle
+
+\hspace{0.1in} $A\ =\ bh$,\hspace{0.2in} \begin{large}The area of a rectangle (or, more generally, a parallelogram) of base $b$ and height $h$.\end{large}
+
+\hspace{0.1in} Triangle
+
+\hspace{1.5in} $A\ =\ \dfrac{1}{2}bh$,\hspace{0.2in} \begin{large}The area of a triangle of base $b$ and height $h$.\end{large}
+
+\hspace{0.1in} Circle
+
+\hspace{1.5in} $A\ =\ \pi r^{2}$,\hspace{0.2in} \begin{large}The area of a circle of radius $\textbf{r}$.\end{large}
+
+\textbf{Volume Formulas}
+
+\hspace{0.1in} Prism
+
+\hspace{1.5in} $V\ =\ Bh$,\hspace{0.2in} \begin{large}Volume of a prism ($B$ is the area of the base).\end{large}
+
+\hspace{0.1in} Pyramid
+
+\hspace{1.5in} $V\ =\ \dfrac{1}{3}Bh$,\hspace{0.2in} \begin{large}Volume of a pyramid ($B$ is the area of the base).\end{large}
+
+\hspace{0.1in} Cube
+
+\hspace{1.5in} $V\ =\ a^{3}$,\hspace{0.2in} \begin{large}The volume $V$ of a cube of edge $\textbf{a}$.\end{large}
+
+\hspace{0.1in} Rectangular Box
+
+\hspace{1.0in} $V\ =\ lwh$,\hspace{0.2in} \begin{large}Volume $V$ of a rectangular box of length $\textbf{l}$, width $\textbf{w}$, and height $\textbf{h}$.\end{large}
+
+\hspace{0.1in} Circular Cylinder
+
+\hspace{1.0in} $V\ =\ \pi r^{2}h$,\hspace{0.2in} \begin{large}Volume $V$ of a circular cylinder of radius $\textbf{r}$ and height $\textbf{h}$.\end{large}
+
+\hspace{0.1in} Circular Cone
+
+\hspace{0.9in} $V\ =\ \dfrac{1}{3}\pi r^{2}h$,\hspace{0.2in} \begin{large}Volume $V$ of a circular cone of radius $\textbf{r}$, height $\textbf{h}$, and slant height $\textbf{s}$.\end{large}
+
+\hspace{0.1in} Sphere
+
+\hspace{1.5in} $V\ =\ \dfrac{4}{3}\pi r^{3}$,\hspace{0.2in} \begin{large}Volume $V$ of a sphere radius $\textbf{r}$.\end{large}
+
+\vspace{0.1in}
+\textbf{Surface Area Formulas}
+
+\hspace{0.1in} Cube
+
+\hspace{1.5in} $S\ =\ 6a^{2}$,\hspace{0.2in} \begin{large}The surface area $S$ of a cube of edge $a$.\end{large}
+
+\vspace{0.1in}
+\hspace{0.1in} Rectangular Box
+
+\hspace{0.1in} $S\ =\ 2(lw\ +\ lh\ +\ wh)$,\hspace{0.025in} \begin{large}Surface area $S$ of a rectangular box of length $\textbf{l}$, width $\textbf{w}$, and height $\textbf{h}$.\end{large}
+
+\hspace{0.1in} Circular Cylinder
+
+\hspace{0.5in} $S\ =\ 2\pi rh\ +\ 2\pi r^{2}$,\hspace{0.2in} \begin{large}Surface area $S$ of a circular cylinder of radius $\textbf{r}$ and height $\textbf{h}$.\end{large}
+
+\hspace{0.1in} Circular Cone
+
+\hspace{0.2in} $S\ =\ \pi r^{2}\ +\ \pi rs$,\hspace{0.2in} \begin{large}Surface area $S$ of a circular cone of radius $\textbf{r}$, height $\textbf{h}$, and slant height $\textbf{s}$.\end{large}
+
+\hspace{0.1in} Sphere
+
+\hspace{1.5in} $S\ =\ 4\pi r^{2}$,\hspace{0.2in} \begin{large}Surface area $\textbf{S}$ of a sphere of radius $\textbf{r}$.\end{large}
+
+\textbf{Sum of Polygon Angles}
+
+\hspace{0.2in} $S\ =\ (n\ -\ 2)\ \cdot\ 180^{\circ}$,\hspace{0.2in} \begin{large}Sum of the measures of the angles of a polygon of $\textbf{n}$ sides.\end{large}
+
+\textbf{Circumference of a Circle}
+
+\hspace{0.1in} $C\ =\ \pi d\ =\ 2\pi r$,\hspace{0.2in} \begin{large}The perimeter (or circumference) of a circle of diameter $\textbf{d}$ (or radius $\textbf{r}$).\end{large}
+
+\textbf{Pythagorean Theorem}
+
+\hspace{2.7in} $c^{2}\ =\ a^{2}\ +\ b^{2}$,
+
+\begin{large}The square of the hypotenuse $\textbf{c}$ of a right triangle equal sum of squares of other two sides $\textbf{a}$ and $\textbf{b}$.\end{large}
+
+\textbf{Trigonometric Ratios}
+
+\hspace{0.1in} $\sin A\ =\ \dfrac{\text{opposite side}}{\text{hypotenuse}}$
+
+\hspace{0.1in} $\cos A\ =\ \dfrac{\text{adjacent side}}{\text{hypotenuse}}$
+
+\hspace{0.1in} $\tan A\ =\ \dfrac{\text{opposite side}}{\text{adjacent side}}$
+
+\vspace{0.5in}
+
+\underline{\textbf{\huge Chapter 11 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Permutations of $n$ objects taken $r$ at a time}
+
+\hspace{2.0in} \begin{Large}$\phantom{ }_{n}P_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!}$, where $r \leq n$
+
+\textbf{Distinguishable Permuations}
+
+\hspace{0.5in} With $n_{1}$ alike, $n_{2}$ alike, ..., $n_{k}$ alike, the Distinguishable Permuations are:
+
+\hspace{1.5in} $\dfrac{n!}{n_{1}!\cdot n_{2}!\cdots n_{k}!}$, where $n_{1} + n_{2} + \cdots + n_{k} = n$
+
+\textbf{Combination of $n$ objects taken $r$ at a time}
+
+\hspace{2.0in} \begin{Large}$\phantom{ }_{n}C_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!r!}$, where $r \leq n$
+
+\textbf{Fundamental Counting Principle}
+
+\hspace{0.1in} If one event can occure in $m$ ways, a second event can occur in $n$ ways, and a third event can occur in $p$ ways, and so on, then the sequence of events can occure in $m\ \times\ n\ \times\ p \times\ \cdots$ ways.
+
+\textbf{Probability}
+
+\hspace{0.1in} $P(\text{not}\ A)\ =\ 1\ -\ P(A)$,\ \ probability of \textbf{complement} of event $A$.
+
+\hspace{0.1in} $P(A\ \text{or}\ B)\ =\ P(A)\ +\ P(B)\ -\ P(A\ \text{and}\ B)$,\ \ probability of event $A$ \textbf{or} event $B$.
+
+\hspace{0.1in} $P(A\ \text{given}\ B)\ =\ \dfrac{P(A\ \text{and}\ B)}{P(B)}$,\ \ probability of event $A$ \textbf{given} event $B$.
+
+\hspace{0.1in} $P(A\ \text{and}\ B)\ =\ P(A)\ \cdot\ P(B)$,\ \ probability of event $A$ \textbf{and} event $B$, where $A$ and $B$ are independent.
+
+\hspace{0.1in} $P(A\ \text{and}\ B)\ =\ P(A)\ \cdot\ P(B\ \text{given that}\ A\ \text{has occured})$,\ \ probability of event $A$ \textbf{and} event $B$, where $A$ and $B$ are dependent.
+
+\hspace{0.1in} Odds $f$:$u$ in favor of an event,\ \ \begin{large}where $f$ is favorable ways and $u$ is unfavorable ways that an event can occur.\end{large}
+
+\vspace{-0.1in}
+\hspace{0.1in} $E\ =\ a_{1}p_{1}\ +\ a_{2}p_{2}\ +\ \cdots\ a_{n}p_{n}$,\ \ \begin{large}expected value $E$, where $a$ are the values that occur with probabilities $p$.\end{large}
+
+\hspace{0.1in} Theoretical Probability
+
+\hspace{0.5in} $P(E)\ =\ \dfrac{\text{number of outcomes in}\ E}{\text{total number of possible outcomes}}\ =\ \dfrac{n(E)}{n(S)}$,\ \ event $E$ in sample space $S$.
+
+\hspace{0.1in} Empirical Probability
+
+\hspace{0.5in} $P(E)\ =\ \dfrac{\text{observered number of times}\ E\ \text{occurs}}{\text{total number of observed occurances}}$
+
+\vspace{0.1in}
+\hspace{0.1in} Probability of a permutation = $\dfrac{\text{number of ways the permuation can occur}}{\text{total number of possible permuations}}$
+
+\hspace{0.1in} Complement Formula: $P(E)\ +\ P(\text{not} E)\ =\ 1$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 12 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Statistics}
+
+\hspace{0.1in} Mean of Data:\ \ $\bar{x}\ =\ \dfrac{\Sigma x}{n}$
+
+\hspace{0.1in} Mean of Frequency Distribution:\ \ $\bar{x}\ =\ \dfrac{\Sigma (xf)}{n}$
+
+\hspace{0.1in} Midrange of Data = $\dfrac{\text{lowest data value}\ +\ \text{highest data value}}{2}$
+
+\hspace{0.1in} Range = highest data value $-$ lowest data value
+
+\hspace{0.1in} Standard Deviation = $\sqrt{\dfrac{\Sigma (\text{data item} - \text{mean})^{2}}{n\ -\ 1}}\ =\ \sqrt{\dfrac{\Sigma (x\ -\ \bar{x})^{2}}{n\ -\ 1}}$
+
+\hspace{0.1in} Z-score = $\dfrac{\text{data item} - \text{mean}}{\text{standard deviation}}$
+
+\hspace{0.1in} Position of the Median = $\dfrac{n\ +\ 1}{2}$
+
+\hspace{0.1in} Mean $\bar{x}$:\hspace{0.2in} The sum of the set of data values divided by the number of values.
+
+\hspace{0.1in} Median:\hspace{0.2in} The middle value when data values are ranked in order of magnitude.  If there is an even number of values, it is the mean of the two middle values.
+
+\hspace{0.1in} Mode:\hspace{0.2in} The value(s) that occur most often in the set of data.
+
+\hspace{0.1in} Range:\hspace{0.2in} The difference between the greatest and least values in a set of data.
+
+\textbf{Empirical Rule}
+
+\includegraphics[scale=0.5]{BellCurve.png}
+
+\newpage
+
+%PUT IN CONTEMPORARY Z-SCORES AND PERCENTILES TABLE HERE!!!
+
+
+\includegraphics[scale=1.1, width=7in]{ContemporaryZScoresPage.PNG}
+
+\newpage
+
+\textbf{Regression Line (Line of Best Fit)}
+
+\hspace{0.1in} The best-fit lin associated with the $n$ points $(x_{1},\ y_{1}),\ (x_{2},\ y_{2}),\ .\ .\ .\ ,\ (x_{n},\ y_{n})$ has the form:
+
+\hspace{2.5in} $y\ =\ mx\ +\ b$
+
+\hspace{0.1in} where:
+
+\hspace{0.2in} Slope = $m\ =\ \dfrac{n\Sigma(xy)\ -\ (\Sigma x)(\Sigma y)}{n(\Sigma x^{2})\ -\ (\Sigma x)^{2}}$
+
+\hspace{0.2in} Intercept = $b\ =\ \dfrac{\Sigma y\ -\ m(\Sigma x)}{n}$
+
+\hspace{0.1in} given:
+
+\hspace{0.2in} $\Sigma xy\ =\ \text{sum of products}\ =\ x_{1}y_{1}\ +\ x_{2}y_{2}\ +\ \cdots\ +\ x_{n}y_{n}$
+
+\hspace{0.2in} $\Sigma x\ =\ \text{sum of}\ x\ \text{values}\ =\ x_{1}\ +\ x_{2}\ +\ \cdots\ +\ x_{n}$
+
+\hspace{0.2in} $\Sigma y\ =\ \text{sum of}\ y\ \text{values}\ =\ y_{1}\ +\ y_{2}\ +\ \cdots\ +\ y_{n}$
+
+\hspace{0.2in} $\Sigma x^{2}\ =\ \text{sum of squares of}\ x\ \text{values}\ =\ x^{2}_{1}\ +\ x^{2}_{2}\ +\ \cdots\ +\ x^{2}_{n}$
+
+\textbf{Coefficient of Correlation}
+
+\hspace{0.1in} The \textbf{coefficient of correlation} for $n$ points $(x_{1},\ y_{1}),\ (x_{2},\ y_{2}),\ .\ .\ .\ ,\ (x_{n},\ y_{n})$ is:
+
+\hspace{2.0in} $r\ =\ \dfrac{n\Sigma(xy)\ -\ (\Sigma x)(\Sigma y)}{\sqrt{n(\Sigma x^{2})\ -\ (\Sigma x)^{2}}\sqrt{n(\Sigma y^{2})\ -\ (\Sigma y)^{2}}}$
+
+\hspace{0.1in} The value of $r$ is between $-1$ (a perfect negative correlation) and $+1$ (a perfect positive correlation).  When $r$ is close to or near $0$, there is \textit{no linear} correlation.
+
+\newpage
+
+\chead{ }
+
+\vspace*{\fill}
+
+\begin{center}\textbf{\Huge{ Statistics }}\end{center}
+
+\vspace*{\fill}
+
+\newpage
+
+%PUT IN STATS Z-TABLE, T-TABLE, and CHI-SQUARE TABLE HERE!!!
+\includepdf[pages=-]{StatisticsTables.pdf} % The dash (-) includes all pages
+
+\newpage
+
+\chead{Statistics}
+
+%\begin{multicols}{2}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 2 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Class Width} = $\dfrac{\text{Range of data}}{\text{Number of classes}}$ (round up to next convenient number)
+
+\textbf{Midpoint} = $\dfrac{\text{(Lower class limit)} + \text{(Upper class limit)}}{2}$
+
+\textbf{Relative Frequency} = $\dfrac{\text{Class frequency}}{\text{Sample size}} = \dfrac{f}{n}$
+
+\textbf{Population Mean}: $\mu\ =\ \dfrac{\Sigma x}{N}$
+
+\textbf{Sample Mean}: $\bar{x}\ =\ \dfrac{\Sigma x}{N}$
+
+\textbf{Weighted Mean}:  $\bar{x}\ =\ \dfrac{\Sigma (x\cdot w)}{\Sigma w}$
+
+\textbf{Mean of Frequency Distribution}: $\bar{x}\ =\ \dfrac{\Sigma (x\cdot f)}{n}$
+
+\textbf{Range} = $\text{(Maximum entry)} - \text{(Minimum entry)}$
+
+\textbf{Population Variance}:  $\sigma^{2}\ =\ \dfrac{\Sigma (x - \mu)^{2}}{N}$
+
+\textbf{Population Standard Deviation}: $\sigma\ =\ \sqrt{\sigma^{2}}\ =\ \sqrt{\dfrac{\Sigma (x - \mu)^{2}}{N}}$
+
+\textbf{Sample Variance}:  $s^{2}\ =\ \dfrac{\Sigma (x - \bar{x})^{2}}{n-1}$
+
+\textbf{Sample Standard Deviation}: $s\ =\ \sqrt{s^{2}}\ =\ \sqrt{\dfrac{\Sigma (x - \bar{x})^{2}}{n-1}}$
+
+\textbf{Empirical Rule} (or 68-95-99.7 Rule) For data with a (symmetric) bell-shaped distribution:
+
+1. About 68\% of data lies within one standard deviation of the mean.
+
+2. About 95\% of the data lies within two standard deviations of the mean.
+
+3. About 99.7\% of the data lies within three standard deviations of the mean.
+
+\includegraphics[scale=0.5]{BellCurve.png}
+
+\textbf{Chebychev's Theorem}
+
+\hspace{0.1in} The portion of any data set lying within $k$ standard deviations $(k > 1)$ of the mean is at least: $1\ -\ \dfrac{1}{k^{2}}$
+
+\textbf{Sample Standard Deviation of a Frequency Distribution}: $s\ =\ \sqrt{\dfrac{\Sigma (x - \bar{x})^{2}f}{n-1}}$
+
+\textbf{Standard Score}: $z\ =\ \dfrac{\text{Value} - \text{Mean}}{\text{Standard Deviation}}\ =\ \dfrac{x - \mu}{\sigma}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 3 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Classical (or Theoretical Probability)}: $P(E) = \dfrac{\text{Number of outcomes in event}\ E}{\genfrac{}{}{0pt}{}{\text{Total number of outcomes}}{\text{in sample space}}}$
+
+\textbf{Empirical (or Statistical) Probability}: $P(E) = \dfrac{\text{Frequency of event}\ E}{\text{Total frequency}} = \dfrac{f}{n}$
+
+\textbf{Probability of a Complement}: $P(E') = 1 - P(E)$
+
+\vspace{0.5in}
+\textbf{Probabilty of occurence of both events $A$ and $B$}:
+
+\hspace{0.1in} $P(A\ \text{and}\ B) = P(A)\cdot P(B $\textbar $ A)$
+
+\hspace{0.1in} $P(A\ \text{and}\ B) = P(A)\cdot P(B)$ if $A$ and $B$ are independent
+
+\textbf{Probability of occurence of either $A$ or $B$ or both}:
+
+\hspace{0.1in} $P(A\ \text{or}\ B) = P(A) + P(B) - P(A\ \text{and}\ B)$
+
+\hspace{0.1in} $P(A\ \text{or}\ B) = P(A) + P(B)$ if $A$ and $B$ are mutually exclusive
+
+\textbf{Permutations of $n$ objects taken $r$ at a time}:
+
+\hspace{0.1in} \begin{Large}$\phantom{ }_{n}P_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!}$, where $r \leq n$
+
+\textbf{Distiguishable Permuations}: $n_{1}$ alike, $n_{2}$ alike, ..., $n_{k}$ alike: 
+
+\hspace{0.1in} $\dfrac{n!}{n_{1}!\cdot n_{2}!\cdots n_{k}!}$,\ where $n_{1} + n_{2} + \cdots + n_{k} = n$
+
+\textbf{Combination of $n$ objects taken $r$ at a time}:
+
+\hspace{0.1in} \begin{Large}$\phantom{ }_{n}C_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!r!}$, where $r \leq n$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 4 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Mean of a Discrete Random Variable}: $\mu = \Sigma xP(x)$
+
+\textbf{Variance of a Discrete Random Variable}: $\sigma^{2} = \Sigma (x - \mu)^{2}P(x)$
+
+\textbf{Standard Deviation of a Discrete Random Variable}: $\sigma = \sqrt{\sigma^{2}} = \sqrt{\Sigma (x - \mu)^{2}P(x)}$
+
+\textbf{Expected Value}: $E(x) = \mu = \Sigma xP(x)$
+
+\textbf{Binomial Probability of $x$ successes in $n$ trials}:
+
+\hspace{0.1in} \begin{Large}$P(x) = \phantom{ }_{n}C_{x}p^{x}q^{n-x} = \dfrac{n!}{(n-x)!x!}p^{x}q^{n-x}$\end{Large}
+
+\vspace{0.5in}
+\textbf{Population Parameters of a Binomial Distribution}:
+
+\hspace{0.1in} Mean: $\mu = np$ \hspace{0.25in} Variance: $\sigma^{2} = npq$
+
+\hspace{0.1in} Standard Deviation: $\sigma = \sqrt{npq}$
+
+\textbf{Geometric Distribution}: The probability that the first success will occur on trial number $x$ is 
+
+\hspace{1.5in} \begin{Large}$P(x) = p(q)^{x-1}$\end{Large},\ where $q = 1 - p$.
+
+\textbf{Poisson Distribution}: The probability of exactly $x$ occurences in an interval is 
+
+\hspace{1.5in} \begin{Large}$P(x) = \dfrac{\mu^{x}e^{-\mu}}{x!}$\end{Large},\ where $e \approx 2.71828$ 
+
+\hspace{0.1in} and $\mu$ is the mean number of occurances per interval unit.
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 5 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Standard Score, or $z$-Score}: $z\ =\ \dfrac{\text{Value}\ -\ \text{Mean}}{\text{Standard Deviation}}\ =\ \dfrac{x - \mu}{\sigma}$
+
+\textbf{Transforming a $z$-Score to an $x$-Value}: $x = \mu + z\sigma$
+
+\textbf{Central Limit Theorem} ($n \geq 30$ or population is normally distibuted):
+
+\hspace{0.1in} Mean of the Sampling Distribution: $\mu_{\bar{x}} = \mu$
+
+\hspace{0.1in} Variance of the Sampling Distribution: $\sigma_{\bar{x}}^{2} = \dfrac{\sigma^{2}}{n}$
+
+\hspace{0.1in} Standard Deviation of the Sampling Distribution (Standard Error): $\sigma_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}$
+
+\hspace{0.1in} $z$-Score = $\dfrac{\text{Value} - \text{Mean}}{\text{Standard Error}} = \dfrac{\bar{x} - \mu_{\bar{x}}}{\sigma_{\bar{x}}} = \dfrac{\bar{x} - \mu}{\sigma / \sqrt{n}}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 6 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{$c$-Confidence Interval for $\mu$}: $\bar{x} - E < \mu < \bar{x} + E$, where:
+
+\hspace{0.1in} \begin{Large}$E = z_{c}$\end{Large}$\dfrac{\sigma}{\sqrt{n}}$ if $\sigma$ is known, and either the population is normally distributed or $n \geq 30$, or:
+
+\hspace{0.1in} \begin{Large}$E = t_{c}$\end{Large}$\dfrac{s}{\sqrt{n}}$ if $\sigma$ is unknown, and either the population is normally distributed or $n \geq 30$.
+
+\textbf{Minimum Sample Size to Estimate $\mu$}: 
+
+\hspace{0.1in} \begin{Large}$n = \left(\dfrac{z_{c}\sigma}{E}\right)^{2}$\end{Large}
+
+\textbf{Point Estimate for $p$, the population proportion of successes}: $\hat{p} =$ {\LARGE $ \dfrac{x}{n}$}
+
+\textbf{$c$-Confidence Interval Population Proportion $p$} (when $np \geq 5$ and $nq \geq 5$): 
+
+\hspace{0.1in} $\hat{p} - E < p < \hat{p} + E$, where \begin{Large}$E = z_{c}\sqrt{\dfrac{\hat{p}\hat{q}}{n}}$\end{Large}
+
+\textbf{Minimum Sample Size to Estimate $p$}: 
+
+\hspace{0.1in} \begin{Large}$n = \hat{p}\hat{q}\left(\dfrac{z_{c}}{E}\right)^{2}$\end{Large}
+
+\textbf{$c$-Confidence Interval for Population Var $\sigma^{2}$}:
+
+\hspace{0.1in} \begin{Large}$\dfrac{(n-1)s^{2}}{\chi_{R}^{2}} < \sigma^{2} < \dfrac{(n-1)s^{2}}{\chi_{L}^{2}}$\end{Large}
+
+\textbf{$c$-Confidence Interval for Population Std Dev $\sigma$}:
+
+\hspace{0.1in} \begin{Large}$\sqrt{\dfrac{(n-1)s^{2}}{\chi_{R}^{2}}} < \sigma < \sqrt{\dfrac{(n-1)s^{2}}{\chi_{L}^{2}}}$\end{Large}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 7 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Decision Rule}:
+
+\hspace{0.1in} 1. $P \leq \alpha$, Reject $H_{0}$.
+
+\hspace{0.1in} 2. $P > \alpha$, Fail to Reject $H_{0}$.
+
+\textbf{$z$-Test for a Mean $\mu$}: 
+
+\hspace{0.1in} \begin{Large}$z = \dfrac{\bar{x} - \mu}{\sigma / \sqrt{n}}$\end{Large}, if $\sigma$ known, and either the population is normally distributed or $n \geq 30$.
+
+\vspace{0.5in}
+\textbf{$t$-Test for a Mean $\mu$}: 
+
+\hspace{0.1in} \begin{Large}$t = \dfrac{\bar{x} - \mu}{s / \sqrt{n}}$\end{Large}, for $\sigma$ unknown, and either the population is normally distributed or $n \geq 30$. 
+
+\hspace{0.2in} (d.f. = $n - 1$)
+
+\textbf{$z$-Test for a Proportion $p$} (when $np \geq 5$ and $nq \geq 5$):
+
+\hspace{0.1in}  \begin{Large}$z = \dfrac{\hat{p} - \mu_{\hat{p}}}{\sigma_{\hat{p}}} = \dfrac{\hat{p} - p}{\sqrt{pq/n}}$\end{Large}
+
+\textbf{Chi-Square Test for a Variance $\sigma^{2}$ or Standard Deviation $\sigma$}:
+
+\hspace{0.1in} \begin{Large}$\chi^{2} = \dfrac{(n-1)s^{2}}{\sigma^{2}}$\end{Large} (d.f. = $n-1$)
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 9 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Correlation Coefficient}:
+
+\hspace{1.0in} \begin{Large}$r = \dfrac{n\Sigma xy - (\Sigma x)(\Sigma y)}{\sqrt{n\Sigma x^{2} - (\Sigma x)^2}\sqrt{n\Sigma y^{2} - (\Sigma y)^{2}}}$\end{Large}
+
+\textbf{$t$-Test for Correlation Coefficient}:
+
+\hspace{1.0in} \begin{Large}$t = \dfrac{r}{\sqrt{\dfrac{1 - r^{2}}{n - 2}}}$\end{Large} (d.f. = $n-2$)
+
+\textbf{Equation of a Regression Line}: $\hat{y} = mx + b$, where:
+
+\hspace{1.0in} \begin{Large}$m = \dfrac{n\Sigma xy - (\Sigma x)(\Sigma y)}{n\Sigma x^{2} - (\Sigma x)^2}$\end{Large} and
+
+\hspace{1.0in} \begin{Large}$b = \bar{y} - m\bar{x} = \dfrac{\Sigma y}{n} -\ m \dfrac{\Sigma x}{n}$\end{Large}
+
+\textbf{Coefficient of Determination}:
+
+\hspace{1.0in} \begin{Large}$r^{2} = \dfrac{\text{Explained variation}}{\text{Total variation}} = \dfrac{\Sigma (\hat{y}_{i} - \bar{y})^{2}}{\Sigma (y_{i} - \bar{y})^{2}}$\end{Large}
+
+\textbf{Standard Error of Estimate}: 
+
+\hspace{1.0in} \begin{Large}$s_{e} = \sqrt{\dfrac{\Sigma (y_{i} - \hat{y}_{i})^{2}}{n-2}}$\end{Large}
+
+\textbf{$c$-Prediction Interval for $y$}: 
+
+\hspace{0.1in} $\hat{y} - E < y < \hat{y} + E$, where \begin{Large}$E = t_{c}s_{e}\sqrt{1 + \dfrac{1}{n} + \dfrac{n(x_{o} - \bar{x})^{2}}{n\Sigma x^{2} - (\Sigma x)^{2}}}$\end{Large}
+
+\hspace{0.2in} (d.f. = $n-2$)
+
+\newpage
+
+\chead{ }
+
+\vspace*{\fill}
+
+\begin{center}\textbf{\Huge{ Algebra }}\end{center}
+
+\vspace*{\fill}
+
+\newpage
+
+\chead{Algebra}
+
+\underline{\textbf{\huge Chapter 1 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Quadratic Formula}
+
+\[\displaystyle x = \dfrac{-b \pm \sqrt{b^{2} - 4ac}}{2a}\]
+
+\textbf{Exponent Rules}
+
+1. \textbf{Product Rule:} \hspace{1.0in}{\Large $a^m\cdot\ a^n= a^{(m\cdot n)}$}
+
+2. \textbf{Quotient Rule:} \hspace{1.0in}{\Large$\dfrac{a^{m}}{a^{n}}=a^{m-n}$}
+
+3. \textbf{Power Rule:} \hspace{1.2in}{\Large$(a^{m})^{n}=a^{(m\cdot n)}$}
+
+4.\textbf{Negative Exponent:} \hspace{0.7in}{\Large$a^{-2}=\dfrac{1}{a^{2}}$}
+
+\vspace{0.1in}
+\underline{\textbf{\huge Chapter 2 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Composition of Two Functions}
+
+The composition of the function $f$ with the function $g$ is: 
+\[(f \circ g)(x) = f(g(x))\]
+
+\vspace{-0.5cm}
+The domain of $f \circ g$ is the set of all $x$ in the domain of $g$ such that $g(x)$ is in the domain of $f$.
+
+\textbf{Lines and Slopes}
+
+The formula for Slope is:
+\[\displaystyle m = \frac{y_2 - y_1}{x_2 - x_1}\]
+
+The Point-Slope form of a Line is:
+\[\displaystyle y-y_1=m\cdot(x-x_1)\]
+
+The Slope-Intercept form of a Line is:
+\[\displaystyle y=mx+b\]
+
+\textbf{Translation}
+
+Vertical Shift: \hspace{1.45in} $g(x)=f(x)\pm c$
+
+Horizontal Shift: \hspace{1.35in}$g(x)=f(x\pm c)$
+
+Reflection on the x-axis: \hspace{0.8in}$g(x)=-f(x)$
+
+Reflection on the y-axis: \hspace{0.8in}$g(x)=f(-x)$
+
+Vertical Stretch/Shrink: \hspace{0.8in}$g(x)=b\cdot f(x)$ if $b>1$ it stretches if $0<b<1$ it shrinks
+
+Horizontal Stretch/Shrink: \hspace{0.6in}$g(x)=f(b\cdot x)$ if $0<b<1$ it stretches if $b>1$ it shrinks
+
+\textbf{Symmetry}
+
+Even Symmetry: \hspace{1.0in}$f(-x)=f(x)$ symmetric about the y-axis
+
+Odd Symmetry: \hspace{1.0in}$f(-x)=-f(x)$ symmetric about the origin
+
+\textbf{Inverse Function}
+
+\hspace{2.0in}$y=f^{-1}(x)$ 
+
+switch x and y, then solve for y, graphically it is a reflection about the $y=x$ line
+
+\vspace{0.5in}
+\underline{\textbf{\huge Chapter 3 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Repeated Zeros}
+
+A factor $(x-a)^{k}$, $k > 1$, yields a repeated zero $x = a$ of multiplicity $k$.
+
+1. When $k$ is odd, the graph $crosses$ the $x$-axis at $x = a$.
+
+2. When $k$ is even, the graph $touches$ the $x$-axis (but does not cross the $x$-axis) at $x = a$.
+
+\vspace{1.0in}
+
+\textbf{Vertical and Horizontal Asymptotes of a Rational Function}
+
+\hspace{0.1in} Let $f$ be the rational function:
+
+\hspace{0.2in} $f(x) = \dfrac{N(x)}{D(x)} = \dfrac{a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{1}x + a_{0}}{b_{m}x^{m} + b_{m-1}x^{m-1} + \cdots + b_{1}x + b_{0}}$,\ \begin{normalsize}where $N(x)$ and $D(x)$ have no common factors.\end{normalsize}
+
+\begin{normalsize}
+
+\hspace{0.2in} 1.\ The graph of $f$ has vertical asymptotes at the zeros of $D(x)$.
+
+\hspace{0.2in} 2.\ The graph of $f$ has one or no horizontal asymptote determined by comparing the degrees of $N(x)$ and $D(x)$.
+
+\hspace{0.3in}a.\ When $n < m$, the graph of $f$ has the line $y = 0$ (the $x$-axis) as a horizontal asymptote.
+
+\hspace{0.3in}b.\ When $n = m$, the graph of $f$ has the line $y = a_{n}/b_{n}$ \begin{small}(ratio of the leading coefficients)\end{small} as a horizontal asymptote.
+
+\hspace{0.3in}c.\ When $n > m$ the graph of $f$ has no horizontal asymptote.
+
+\end{normalsize}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 4 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Formulas for Compound Interest}
+
+\hspace{0.1in} After $t$ years, the balance $A$ in an account with principle $P$ and annual interest rate $r$ (in decimal form) is given by the following formulas:
+
+\hspace{0.2in} 1.\ For $n$ compoundings per year: \hspace{0.5in} $A = P\left(1 + \dfrac{r}{n}\right)^{nt}$
+
+
+\hspace{0.2in} 2.\ For continuous compounding: \hspace{0.5in}  $A = Pe^{rt}$
+
+\textbf{Properties of Logarithms}
+
+\hspace{0.1in} Let $b$ be a positive number such that $b \neq 1$, and let $p$ be a real number.
+
+ 
+1. \textbf{Product Rule:} \hspace{1.0in}{\Large $\log_b (M \cdot N) = \log_b (M) + \log_b (N)$}
+
+2. \textbf{Quotient Rule:} \hspace{0.95in}{\Large$\text{log}_{b}\left(\dfrac{M}{N}\right) = \text{log}_{b}(M) - \text{log}_{b}(N)$}
+
+3. \textbf{Power Rule:} \hspace{1.15in}{\Large$\text{log}_{b}(M^{p}) = p\cdot \text{log}_{b}(M)$}
+
+4. \textbf{Change of Base Formula:} \hspace{0.075in}{\Large$\text{log}_{b}(N) = \dfrac{\text{log}_{a}(N)}{\text{log}_{a}(b)}$}
+
+\vspace{0.2in}
+\textbf{Exponential Growth and Decay Formula}
+
+\hspace{0.1in} {\Large\vspace{-0.3in} \[A = A_0 e^{kt}\]}
+
+\textbf{Half-Life Formula}
+
+\hspace{0.1in} {\vspace{-0.5in}\Large\[ln(\dfrac{1}{2})=kt\]}
+
+\vspace{-0.1in}
+
+\underline{\textbf{\huge Chapter 11 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{The $n$th Term of an Arithmetic Sequence}
+
+\hspace{0.1in} The $n$th term of an arithmetic sequence has the form:
+\vspace{-0.1in}
+\hspace{1.0in} $a_{n}\ =\ a_{1}\ +\ (n-1)d$
+
+\vspace{-0.2in}
+\hspace{0.1in} where $d$ is the common difference and $a_{1}$ is the first term.
+
+\textbf{The Sum of a Finite Arithmetic Sequence}
+
+\hspace{0.1in} The sum of a finite arithmetic sequence with $n$ terms is:
+\hspace{0.8in} $S_{n}\ =\ \dfrac{n}{2}(a_{1} + a_{n})$
+
+\vspace{-0.1in}
+\textbf{The $n$th Term of an Geometric Sequence}
+
+\vspace{-0.1in}
+\hspace{0.1in} The $n$th term of an geometric sequence has the form:
+\hspace{1.0in} $a_{n}\ =\ a_{1}r^{n-1}$
+
+\vspace{-0.2in}
+\hspace{0.1in} where $r$ is the common ratio and $a_{1}$ is the first term.
+
+\textbf{The Sum of a Finite Geometric Sequence}
+
+\vspace{-0.15in}
+\hspace{0.1in} The sum of a finite geometric sequence with $n$ terms is:
+\hspace{0.8in} $S_{n}\ =\ \dfrac{a_{1}(1\ -\ r^{n})}{1\ -\ r}$
+
+\textbf{The Sum of an Infinite Geometric Sequence}
+
+\vspace{-0.15in}
+\hspace{0.1in} The sum of an infinite geometric sequence is:
+\hspace{1.6in} $S\ =\ \dfrac{a_{1}}{1\ -\ r}$
+
+
+\textbf{Annuity Formula}
+
+\vspace{-0.4in}
+\hspace{0.1in} \[A\ =\ \dfrac{P\left[\left(1\ +\ \dfrac{r}{n}\right)^{nt}\ -\ 1\right]}{\left(\dfrac{r}{n}\right)}\]
+
+\textbf{Classical (or Theoretical Probability)}
+
+\vspace{-0.3in} \[P(E)\ =\ \dfrac{\text{Number of outcomes in event}\ E}{\text{Total number of outcomes in sample space}}\]
+
+\textbf{Empirical (or Statistical) Probability}
+
+\vspace{-0.3in} \[P(E)\ =\ \dfrac{\text{Frequency of event}\ E}{\text{Total frequency}}\ =\ \dfrac{f}{n}\]
+
+
+\textbf{Probability of a Complement}
+
+\vspace{-0.5in} \[P(E')\ =\ 1\ -\ P(E)\]
+
+\textbf{Probabilty of occurence of both events $A$ and $B$}
+
+\hspace{2.5in} $P(A\ \text{and}\ B) = P(A)\cdot P($B \textbar $A)$
+
+\hspace{1.5in} $P(A\ \text{and}\ B) = P(A)\cdot P(B)$,\ \ if $A$ and $B$ are independent
+
+\textbf{Probability of occurence of either $A$ or $B$ or both}
+
+\hspace{2.0in} $P(A\ \text{or}\ B) = P(A) + P(B) - P(A\ \text{and}\ B)$
+
+\hspace{1.5in} $P(A\ \text{or}\ B) = P(A) + P(B)$,\ \ if $A$ and $B$ are mutually exclusive
+
+\textbf{Permutations of $n$ objects taken $r$ at a time:}
+
+\hspace{2.5in} \begin{Large}$\phantom{ }_{n}P_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!}$, where $r \leq n$
+
+\textbf{Distinguishable Permuations}
+
+\hspace{1.0in} With $n_{1}$ alike, $n_{2}$ alike, ..., $n_{k}$ alike, the Distinguishable Permuations are:
+
+\hspace{2.0in} $\dfrac{n!}{n_{1}!\cdot n_{2}!\cdots n_{k}!}$, where $n_{1} + n_{2} + \cdots + n_{k} = n$
+
+\textbf{Combination of $n$ objects taken $r$ at a time}
+
+\hspace{2.5in} \begin{Large}$\phantom{ }_{n}C_{r}$\end{Large}$\ =\ \dfrac{n!}{(n-r)!r!}$, where $r \leq n$
+
+\newpage
+
+\begin{center}{\Huge \textbf{Trigonometry} \hrule}\end{center}
+
+\setlength{\columnsep}{3cm}
+\begin{multicols}{2}
+
+\textbf{The Six Trigonometric Functions}
+
+$\sin \theta\ =\ \dfrac{\text{opp}}{\text{hyp}}\ =\ \dfrac{y}{r}\ =\ \dfrac{1}{\csc \theta}$
+
+$\cos \theta\ =\ \dfrac{\text{adj}}{\text{hyp}}\ =\ \dfrac{x}{r}\ =\ \dfrac{1}{\sec \theta}$
+
+$\tan \theta\ =\ \dfrac{\text{opp}}{\text{adj}}\ =\ \dfrac{y}{x}\ =\ \dfrac{1}{\cot \theta}\ =\ \dfrac{\sin \theta}{\cos \theta}$
+
+$\csc \theta\ =\ \dfrac{\text{hyp}}{\text{opp}}\ =\ \dfrac{r}{y}\ =\ \dfrac{1}{\sin \theta}$
+
+$\sec \theta\ =\ \dfrac{\text{hyp}}{\text{adj}}\ =\ \dfrac{r}{x}\ =\ \dfrac{1}{\cos \theta}$
+
+$\cot \theta\ =\ \dfrac{\text{adj}}{\text{opp}}\ =\ \dfrac{x}{y}\ =\ \dfrac{1}{\tan \theta}\ =\ \dfrac{\cos \theta}{\sin \theta}$
+
+\columnbreak
+
+\textbf{Arc Length} 
+
+$s = r\theta$
+
+\textbf{Area of a Sector} 
+
+$A = \frac{1}{2} \pi r^2 \theta$
+
+\end{multicols}
+
+
+\[\includegraphics[width=4.5in,height=4in]{FullUnitCircle-ContrastAndStroke.png}\]
+
+\[\text{(Larger copy in the PreCal section)}\]
+
+\newpage 
+
+\chead{ }
+
+\vspace*{\fill}
+
+\begin{center}{\textbf{\Huge Pre-Calculus }}\end{center}
+
+\vspace*{\fill}
+
+\newpage
+
+%PUT IN UNIT CIRCLE HERE!!!
+
+\hspace{-0.6in}\includegraphics[scale=0.3]{FullUnitCircle-ContrastAndStroke.png}
+
+\newpage
+
+\chead{Trigonometry Formulas}
+
+\begin{multicols}{2}
+
+\includegraphics[scale=0.40]{trig_angle.png}
+
+{\setstretch{0.25}
+\textbf{The Six Trigonometric Functions}
+
+$\sin \theta\ =\ \dfrac{\text{opp}}{\text{hyp}}\ =\ \dfrac{y}{r}\ =\ \dfrac{1}{\csc \theta}$
+
+$\cos \theta\ =\ \dfrac{\text{adj}}{\text{hyp}}\ =\ \dfrac{x}{r}\ =\ \dfrac{1}{\sec \theta}$
+
+$\tan \theta\ =\ \dfrac{\text{opp}}{\text{adj}}\ =\ \dfrac{y}{x}\ =\ \dfrac{1}{\cot \theta}\ =\ \dfrac{\sin \theta}{\cos \theta}$
+
+$\csc \theta\ =\ \dfrac{\text{hyp}}{\text{opp}}\ =\ \dfrac{r}{y}\ =\ \dfrac{1}{\sin \theta}$
+
+$\sec \theta\ =\ \dfrac{\text{hyp}}{\text{adj}}\ =\ \dfrac{r}{x}\ =\ \dfrac{1}{\cos \theta}$
+
+$\cot \theta\ =\ \dfrac{\text{adj}}{\text{opp}}\ =\ \dfrac{x}{y}\ =\ \dfrac{1}{\tan \theta}\ =\ \dfrac{\cos \theta}{\sin \theta}$
+
+\textbf{Pythagorean Identities}
+
+$\sin^{2} \theta\ +\ \cos^{2} \theta\ =\ 1$
+
+$1\ +\ \tan^{2} \theta\ =\ \sec^{2} \theta$
+
+$1\ +\ \cot^{2} \theta\ =\ \csc^{2} \theta$
+
+\textbf{Cofunction Identities}
+
+\setlength{\columnsep}{5pt}
+\begin{multicols}{2}
+
+\begin{small}
+
+$\sin\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \cos \theta$
+
+$\cos\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \sin \theta$
+
+$\tan\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \cot \theta$
+
+$\csc\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \sec \theta$
+
+$\sec\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \csc \theta$
+
+$\cot\left(\dfrac{\pi}{2}\ -\ \theta\right)\ =\ \tan \theta$
+
+\end{small}
+
+\end{multicols}
+
+
+\textbf{Even/Odd Identities}
+
+\begin{multicols}{2}
+
+\begin{small}
+
+$\sin(-\theta)\ =\ -\sin\theta$
+
+$\cos(-\theta)\ =\ \cos\theta$
+
+$\tan(-\theta)\ =\ -\tan\theta$
+
+$\csc(-\theta)\ =\ -\csc\theta$
+
+$\sec(-\theta)\ =\ \sec\theta$
+
+$\cot(-\theta)\ =\ -\cot\theta$
+
+\end{small}
+
+\end{multicols}
+
+\textbf{Sum and Difference Formulas}
+
+$\sin(u\ \pm\ v)\ =\ \sin u \cos v\ \pm\ \cos u \sin v$
+
+$\cos(u\ \pm\ v)\ =\ \cos u \cos v\ \mp\ \sin u \sin v$
+
+$\tan(u\ \pm\ v)\ =\ \dfrac{\tan u\ \pm\ \tan v}{1\ \mp\ \tan u \tan v}$
+
+\textbf{Double-Angle Formulas}
+
+$\sin 2\theta\ =\ 2 \sin\theta \cos\theta$
+
+$\cos 2\theta\ =$\begin{small} $\ \cos^{2}\theta - \sin^{2}\theta\ =\ 2\cos^{2}\theta - 1\ =\ 1 - 2\sin^{2}\theta$ \end{small}
+
+$\tan 2\theta\ =\ \dfrac{2\tan\theta}{1\ -\ \tan^{2}\theta}$
+
+\vspace{0.1in}
+
+\begin{multicols}{2}
+
+\begin{small}
+
+\textbf{Half-Angle Formulas}
+
+$\sin\left(\dfrac{\theta}{2}\right)\ =\ \pm\sqrt{\dfrac{1\ -\ \cos\theta}{2}}$
+
+$\cos\left(\dfrac{\theta}{2}\right)\ =\ \pm\sqrt{\dfrac{1\ +\ \cos\theta}{2}}$
+
+$\tan\left(\dfrac{\theta}{2}\right)\ =\ \pm\sqrt{\dfrac{1\ -\ \cos\theta}{1\ +\ \cos\theta}}$
+
+\begin{raggedright}
+
+\textbf{Power-Reducing Formulas}
+
+$\sin^{2}\theta\ =\ \dfrac{1\ -\ \cos 2\theta}{2}$
+
+$\cos^{2}\theta\ =\ \dfrac{1\ +\ \cos 2\theta}{2}$
+
+$\tan^{2}\theta\ =\ \dfrac{1\ -\ \cos 2\theta}{1\ +\ \cos 2\theta}$
+
+\end{raggedright}
+
+\end{small}
+
+\end{multicols}
+
+\textbf{Sum-to-Product Formulas}
+
+$\sin u\ +\ \sin v\ =\ 2\sin\left(\dfrac{u+v}{2}\right)\cos\left(\dfrac{u-v}{2}\right)$
+
+$\sin u\ -\ \sin v\ =\ 2\cos\left(\dfrac{u+v}{2}\right)\sin\left(\dfrac{u-v}{2}\right)$
+
+$\cos u\ +\ \cos v\ =\ 2\cos\left(\dfrac{u+v}{2}\right)\cos\left(\dfrac{u-v}{2}\right)$
+
+$\cos u\ -\ \cos v\ =\ -2\sin\left(\dfrac{u+v}{2}\right)\sin\left(\dfrac{u-v}{2}\right)$
+
+\textbf{Product-to-Sum Formulas}
+
+$\sin u \sin v\ =\ \dfrac{1}{2}[\cos(u-v)\ -\ \cos(u+v)]$
+
+$\cos u \cos v\ =\ \dfrac{1}{2}[\cos(u-v)\ +\ \cos(u+v)]$
+
+$\sin u \cos v\ =\ \dfrac{1}{2}[\sin(u+v)\ +\ \sin(u-v)]$
+
+$\cos u \sin v\ =\ \dfrac{1}{2}[\sin(u+v)\ -\ \sin(u-v)]$
+
+}
+
+\end{multicols}
+
+\newpage
+
+\chead{Pre-Calculus}
+
+%\begin{multicols}{2}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 3 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Formulas for Compound Interest}
+
+\hspace{0.1in} After $t$ years, the balance $A$ in an account with principle $P$ and annual interest rate $r$ (in decimal form) is given by the following formulas.
+
+\hspace{0.2in} \textbf{1.} For $n$ compoundings per year: $A\ =\ P\left(1\ +\ \dfrac{r}{n}\right)^{nt}$
+
+\hspace{0.2in} \textbf{2.} For continuous compounding: $A\ =\ Pe^{rt}$
+
+\textbf{Properties of Logarithms}
+
+\hspace{0.1in} Let $a$ be a positive number such that $a\ \neq\ 1$, and let $n$ be a real number.  If $u$ and $v$ are positive real numbers, then the following properties are true.
+
+\hspace{0.1in} Logarithms with Base $a$
+
+\hspace{0.2in} \textbf{1. Product Property:} $\text{log}_{a}\left(uv\right)\ =\ \text{log}_{a}(u)\ +\ \text{log}_{a}(v)$
+
+\hspace{0.2in} \textbf{2. Quotient Property:} $\text{log}_{a}\left(\dfrac{u}{v}\right)\ =\ \text{log}_{a}(u)\ -\ \text{log}_{a}(v)$
+
+\hspace{0.2in} \textbf{3. Power Property:} $\text{log}_{a}\left(u^{n}\right)\ =\ n\cdot \text{log}_{a}(u)$
+
+\textbf{Exponential Growth and Decay}
+
+\hspace{0.1in} Exponential Growth and Decay: $A\ =\ A_{0}e^{kt}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapters 4 and 5 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Arc Length}
+
+\hspace{0.1in} For a circle of radius $r$, a central angle $\theta$ intercepts an arc of length $s$ given by:
+
+\hspace{2.5in} $s\ =\ r\theta$ \begin{large} Length of circular arc\end{large}
+
+\hspace{0.1in} where $\theta$ is measured in radians.  Note that if $r\ =\ 1$, then $s\ =\ \theta$, and the radian measure of $\theta$ equals the arc length.
+
+\textbf{Linear and Angular Speeds}
+
+\hspace{0.1in} Consider a particle moving at a constant speed along a circular arc of radius $r$.  If $s$ is the length of the arc traveled in time $t$, then the \textbf{linear speed} $v$ of the particle is:
+
+\hspace{2.5in} Linear speed $v\ =\ \dfrac{\text{arc length}}{\text{time}}\ =\ \dfrac{s}{t}$
+
+\hspace{0.1in} Moreover, if $\theta$ is the angle (in radian measure) corresponding to the arc length $s$, then the \textbf{angular speed} $\omega$ (the lowecase Greek letter omega) of the particle is:
+
+\hspace{2.5in} Angular speed $\omega\ =\ \dfrac{\text{central angle}}{\text{time}}\ =\ \dfrac{\theta}{t}$
+
+\hspace{0.1in} The connecting formula for linear speed, $\textbf{v}$, and angular speed, $\boldsymbol{\omega}$, is:
+
+\vspace{-0.2in}
+
+\hspace{2.7in} $v\ =\ \omega r$
+
+\vspace{-0.3in}
+
+\hspace{0.1in} with radius $r$.
+
+\textbf{Area of a Sector}
+
+\vspace{-0.1in}
+
+\hspace{0.1in} For a circle of radius $r$, the area $A$ of a sector of the circle with central angle $\boldsymbol{\theta}$ is:
+
+\hspace{2.5in} $A\ =\ \dfrac{1}{2}\pi r^{2}\theta$
+
+\vspace{-0.3in}
+
+\hspace{0.1in} where $\boldsymbol{\theta}$ is measured in radians.
+
+%\textbf{Half-Angle Formulas}
+
+%\hspace{0.2in} $\sin \dfrac{u}{2}\ =\ \pm\sqrt{\dfrac{1 - \cos u}{2}}$
+
+%\hspace{0.2in} $\cos \dfrac{u}{2}\ =\ \pm\sqrt{\dfrac{1 + \cos u}{2}}$
+
+%\hspace{0.2in} $\tan \dfrac{u}{2}\ =\ \dfrac{1 - \cos u}{\sin u}\ =\ \dfrac{\sin u}{1 + \cos u}$
+
+%\hspace{0.1in} The signs of $\sin \dfrac{u}{2}$ and $\cos \dfrac{u}{2}$ depend on the quadrant in which $\dfrac{u}{2}$ lies.
+
+\vspace{0.15in}
+
+\underline{\textbf{\huge Chapter 6 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Law of Sines}
+
+\hspace{0.1in} If $ABC$ is a triangle with sides $a$, $b$, and $c$, then:
+
+\hspace{1.0in} $\dfrac{a}{\sin A}\ =\ \dfrac{b}{\sin B}\ =\ \dfrac{c}{\sin C}$
+
+\textbf{Law of Cosines}
+
+\hspace{0.1in} Standard Form: $a^{2}\ =\ b^{2}\ +\ c^{2}\ - 2bc\cos A$
+
+\hspace{0.1in} Alternative Form: $\cos A\ =\ \dfrac{b^{2}\ +\ c^{2}\ -\ a^{2}}{2bc}$
+
+\textbf{Area of a Triangle}
+
+\hspace{2.5in} $K\ =\ \dfrac{1}{2}ab\cdot \sin (C)$
+
+\textbf{Heron's Area Formula}
+
+\hspace{1.0in} $K\ =\ \sqrt{s(s-a)(s-b)(s-c)}\ \text{where}\ s\ =\ \dfrac{a+b+c}{2}$
+
+\textbf{Component Form of a Vector}
+
+\hspace{0.1in} The component form of the vector with initial point $P(p_{1},p_{2})$ and the terminal point $Q(q_{1},q_{2})$ is given by:
+
+\vspace{-0.2in}
+
+\hspace{1.8in} $\overrightarrow{PQ}\ =\ \langle q_{1}\ -\ p_{1},\ q_{2}\ -\ p_{2}\rangle\ =\ \langle v_{1},\ v_{2}\rangle\ =\ \textbf{v}$
+
+\hspace{0.1in} The \textbf{magnitude} (or length) of \textbf{v} is given by:
+
+\hspace{1.5in} $|v| =\ \sqrt{(q_{1}\ -\ p_{1})^{2}\ +\ (q_{2}\ -\ p_{2})^{2}}\ =\ \sqrt{v_{1}^{2}\ +\ v_{2}^{2}}$
+
+\hspace{0.1in} If $| \textbf{v}|\ =\ 1$, then \textbf{v} is a \textbf{unit vector}.  Moreover, $| \textbf{v}|\ =\ 0$ if and only if \textbf{v} is the zero vector \textbf{0}.
+
+\textbf{Unit Vector}
+
+\hspace{1.0in} $\textbf{u}\ =\ \text{unit vector}\ =\ \dfrac{\textbf{v}}{|\textbf{v}|}\ =\ \left(\dfrac{1}{|\textbf{v}|}\right)\textbf{v}$ is unit vector in direction of \textbf{v}.
+
+\textbf{Definition of the Dot Product}
+
+\hspace{1.0in} The \textbf{dot product} of $\textbf{u}\ =\ \langle u_{1},\ u_{2}\rangle$ and $\textbf{v}\ =\ \langle v_{1},\ v_{2}\rangle$ is:
+
+\hspace{2.5in} $\textbf{u}\ \cdot\ \textbf{v}\ =\ u_{1}v_{1}\ +\ u_{2}v_{2}$
+
+\textbf{Projection Using the Dot Product}
+
+\hspace{1.0in} If \textbf{u} and \textbf{v} are nonzero vectors, then the projection of \textbf{u} onto \textbf{v} is:
+
+\hspace{2.5in} $\text{proj}_{\textbf{v}}\textbf{u}\ =\ \left(\dfrac{\textbf{u}\ \cdot\ \textbf{v}}{|\textbf{v}|^{2}}\right)\textbf{v}$
+
+\vspace{0.25in}
+
+\textbf{Angle Between Two Vectors}
+
+\hspace{1.0in} If $\theta$ is the angle between two nonzero vectors \textbf{u} and \textbf{v}, then:
+
+\hspace{2.5in} $\cos \ \theta\ =\ \dfrac{\textbf{u}\ \cdot\ \textbf{v}}{| \textbf{u}|\ | \textbf{v}|}$
+
+\vspace{0.3in}
+
+\textbf{Work}
+
+\hspace{0.1in} The work $W$ done by a \textit{constant} force \textbf{F} acting along the line of motion of an object is given by:
+
+\hspace{1.8in} $W\ =\ \text{(magnitude of force)(distance)}\ =\ | \textbf{F}|\ | \overrightarrow{PQ}|$
+
+\textbf{Absolute Value of a Complex Number}
+
+The absolute value of the complex number $\textbf{z\ =\ a\ +\ bi}$ is:
+
+\hspace{1.5in} \Large$|a+bi|=\sqrt{a^{2}+b^{2}}$
+
+\textbf{Distance Formula in the Complex}
+
+The distance d between the points (a,b) and (s,t) in the complex plane is:
+
+\hspace{2.0in}$d={\sqrt{(s-a)^2+(t-b)^2}}$
+
+\textbf{Midpoint Formula in the Complex Plane}
+
+The Midpoint of the line segment joining the points (a,b) and (s,t) in the complex plan is:
+
+\vspace{-0.2in}
+\hspace{2.0in}$\text{Midpoint}=(\dfrac{a + s}{2},\dfrac{b+t}{2})$
+
+\textbf{Trigonometric Form of a Complex Number}
+
+\hspace{0.1in} The \textbf{trigonometric form} of the complex number $\textbf{z\ =\ a\ +\ bi}$ is:
+
+\hspace{2.0in} $z\ =\ r(\cos \ \theta\ +\ i\sin \ \theta)$
+
+\hspace{0.1in} where $a\ =\ r\ \cos \ \theta,\ b\ =\ r\ \sin \ \theta,\ r\ =\ \sqrt{a^{2}\ +\ b^{2}},\ \text{and}\ \tan \ \theta\ =\ b/a$.  The number $r$ is the \textbf{modulus} of $z$, and $\theta$ is called an \textbf{argument} of $z$.
+
+\vspace{0.5in}
+\textbf{Product and Quotient of Two Complex Numbers}
+
+\hspace{0.1in} Let $z_{1}\ =\ r_{1}(\cos \ \theta_{1}\ +\ i\sin \ \theta_{1})$ and $z_{1}\ =\ r_{2}(\cos \ \theta_{2}\ +\ i\sin \ \theta_{2})$ be complex numbers.
+
+\hspace{1.0in} $z_{1}z_{2}\ =\ r_{1}r_{2}\left[ \cos (\theta_{1}\ +\ \theta_{2})\ +\ i\sin (\theta_{1}\ +\ \theta_{2})\right]$ is Product Rule.
+
+\hspace{1.0in} $\dfrac{z_{1}}{z_{2}}\ =\ \dfrac{r_{1}}{r_{2}}\left[ \cos (\theta_{1}\ -\ \theta_{2})\ +\ i\sin (\theta_{1}\ -\ \theta_{2})\right]$ is Quotient Rule.
+
+\textbf{DeMoivre's Theorem}
+
+\hspace{0.1in} If $z\ =\ r(\cos \ \theta\ +\ i\sin \ \theta)$ is a complex number and $n$ is a positive integer, then:
+
+\hspace{1.3in} $z^{n}\ =\ \left[ r(\cos \ \theta\ +\ i\sin \ \theta)\right]^{n}$ $=\ r^{n}(\cos n\theta\ +\ i\sin n\theta)$
+
+\textbf{Finding \textit{n}th Roots of a Complex Number}
+
+\hspace{0.1in} For a positive integer $n$, the complex number $z\ =\ r(\cos \ \theta\ +\ i\sin \ \theta)$ has exactly $n$ distinct $n$th roots given by:
+
+\hspace{1.5in} $z_{k}\ =\ \sqrt[n]{r}\left(\cos \dfrac{\theta\ +\ 2\pi k}{n}\ +\ i\sin \dfrac{\theta\ +\ 2\pi k}{n}\right)$
+
+\hspace{0.1in} where $k\ =\ 0,\ 1,\ 2,\ .\ .\ .\ ,\ n\ -\ 1$
+
+\underline{\textbf{\huge Chapter 10 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Angle Between Two Lines}
+
+\hspace{0.1in} If two nonperpendicular lines have slopes $m_{1}$ and $m_{2}$, then the tangent of the angle between the two lines is:
+
+\hspace{2.5in} $\tan \ \theta\ =\ \left|\dfrac{m_{2}\ -\ m_{1}}{1\ +\ m_{1}m_{2}}\right|$
+
+\textbf{Distance Between a Point and a Line}
+
+\hspace{0.1in} The distance between the point $(x_{1},\ y_{1})$ and the line $Ax\ +\ By\ +\ C\ =\ 0$ is:
+
+\hspace{2.5in} $d\ =\ \dfrac{|Ax_{1}\ +\ By_{1}\ +\ C|}{\sqrt{A^{2}\ +\ B^{2}}}$
+
+\textbf{Standard Equation of a Parabola}
+
+\hspace{0.1in} The \textbf{standard form of the equation of a parabola} with vertex at $(h,\ k)$ is as follows:
+
+\hspace{0.5in} $(x\ -\ h)^{2}\ =\ 4p(y\ -\ k),\ p\ \neq\ 0$ has a vertical axis; directrix: $y\ =\ k\ -\ p$
+
+\hspace{0.5in} $(y\ -\ k)^{2}\ =\ 4p(x\ -\ h),\ p\ \neq\ 0$ has a horizontal axis; directrix: $x\ =\ h\ -\ p$
+
+\hspace{0.1in} The focus lies on the axis $p$ units (\textit{directed distance}) from the vector.  If the vertex is at the origin, then the equation takes one of the following forms:
+
+\hspace{2.5in} $x^{2}\ =\ 4py$ for a vertical axis
+
+\hspace{2.5in} $y^{2}\ =\ 4px$ for a horizontal axis
+
+\textbf{Standard Equation of an Ellipse}
+
+\hspace{0.1in} The \textbf{standard form of the equation of an ellipse} with center $(h,\ k)$ and major and minor axes of lengths $2a$ and $2b$, respectively, where $0\ <\ b\ <\ a$, is:
+
+\hspace{1.5in} $\dfrac{(x\ -\ h)^{2}}{a^{2}}\ +\ \dfrac{(y\ -\ k)^{2}}{b^{2}}\ =\ 1$ when major axis is horizontal
+
+\hspace{1.5in} $\dfrac{(x\ -\ h)^{2}}{b^{2}}\ +\ \dfrac{(y\ -\ k)^{2}}{a^{2}}\ =\ 1$ when major axis is vertical
+
+\vspace{0.5in}
+\textbf{Standard Equation of a Hyperbola}
+
+\hspace{0.1in} The \textbf{standard form of the equation of a hyperbola} with center $(h,\ k)$ is:
+
+\hspace{1.0in} $\dfrac{(x\ -\ h)^{2}}{a^{2}}\ -\ \dfrac{(y\ -\ k)^{2}}{b^{2}}\ =\ 1$ when transverse axis is horizontal
+
+\hspace{1.0in} $\dfrac{(y\ -\ k)^{2}}{a^{2}}\ -\ \dfrac{(x\ -\ h)^{2}}{b^{2}}\ =\ 1$ when transverse axis is vertical
+
+\hspace{2.0in} with $c^{2}\ =\ a^{2}\ +\ b^{2}$
+
+\vspace{-0.1in}
+
+\textbf{Asymptotes of a Hyperbola}
+
+\hspace{0.1in} The equations of the asymptotes of a hyperbola are:
+
+\hspace{1.2in} $y\ =\ k\ \pm\ \dfrac{b}{a}(x\ -\ h)$ when transverse axis is horizontal
+
+\hspace{1.2in} $y\ =\ k\ \pm\ \dfrac{a}{b}(x\ -\ h)$ when transverse axis is vertical
+
+\textbf{Eccentricity}
+
+\hspace{2.0in} $e\ =\ \dfrac{c}{a}$
+
+\textbf{Rotation of Axes to Eliminate an \textit{xy}-Term}
+
+\hspace{0.1in} The general second-degree equation:
+
+\hspace{1.0in} $Ax^{2}\ +\ Bxy\ +\ Cy^{2}\ +\ Dx\ +\ Ey\ +\ F\ =\ 0$
+
+\hspace{2.0in} $\text{cot}2\theta\ =\ \dfrac{A\ -\ C}{B}$
+
+\hspace{1.75in} $x\ =\ x'\cos \ \theta\ -\ y'\sin \ \theta$
+
+\hspace{1.75in} $y\ =\ x'\sin \ \theta\ +\ y'\cos \ \theta$
+
+\vspace{0.1in}
+\textbf{Coordinate Conversion}
+
+\hspace{0.1in} The polar coordinates $(r,\ \theta)$ are related to the rectangular coordinates $(x,\ y)$ as follows:
+
+\hspace{0.5in} \textbf{Polar-to-Rectangular} \hspace{0.1in} $x\ =\ r\ \cos \ \theta$ \hspace{0.2in} $y\ =\ r\ \sin \ \theta$
+
+\hspace{0.5in} \textbf{Rectangular-to-Polar} \hspace{0.1in} $\tan \ \theta\ =\ \dfrac{y}{x}$ \hspace{0.2in} $r^{2}\ =\ x^{2}\ +\ y^{2}$
+
+\textbf{Polar Equations of Conics}
+
+\hspace{0.1in} The graph of a polar equation of the form:
+
+\hspace{0.2in} $\textbf{1.}\ r\ =\ \dfrac{ep}{1\ \pm\ e\cos \ \theta}$ \hspace{0.1in} 
+
+\hspace{0.2in} $\textbf{2.}\ r\ =\ \dfrac{ep}{1\ \pm\ e\sin \ \theta}$
+
+\hspace{0.1in} is a conic, where $e\ >\ 0$ is the eccentricity and $|p|$ is the distance between the focus (pole) and the directrix.
+
+\textbf{Classification of Conics by Eccentricity}
+
+\hspace{0.1in} Let $F$ be a fixed point (\textit{focus}) and let $D$ be a fixed line (\textit{directrix}) in the plane.  Let $P$ be another point in the plane and let $e$ (\textit{eccentricity}) be the ratio of the distance between $P$ and $F$ to the distance between $P$ and $D$.  The collection of all points $P$ with a given eccentricity is a conic.
+
+\hspace{0.2in} \textbf{1.} The conic is an ellipse for $0\ <\ e\ <\ 1$.
+
+\hspace{0.2in} \textbf{2.} The conic is a parabola for $e\ =\ 1$.
+
+\hspace{0.2in} \textbf{3.} The conic is a hyperbola for $e\ >\ 1$.
+
+\textbf{Classification of Conics in Algebraic Form}
+
+When a conic is in the form $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$, the determinant of the equation shows:
+
+\textbf{1.} If $B^2-4AC>0$, the conic is a hyperbola
+
+\textbf{2.} If $B^2-4AC<0$, the conic is an ellipse or circle.
+
+\textbf{3.} If $B^2-4AC=0$, the conic is a hyperbola
+
+\newpage
+
+\chead{ }
+
+\vspace*{\fill}
+
+\begin{center}\textbf{\Huge{ Calculus }}\end{center}
+
+\vspace*{\fill}
+
+\newpage
+
+\chead{Derivatives and Integrals}
+
+\textbf{Basic Differentiation Rules}
+
+\begin{multicols}{2}
+
+1.\ $\dfrac{d}{dx}[cu]\ =\ cu'$
+
+2.\ $\dfrac{d}{dx}[u\pm v]\ =\ u'\pm v'$
+
+3.\ $\dfrac{d}{dx}[uv]\ =\ uv'+vu'$
+
+4.\ $\dfrac{d}{dx}\left[\dfrac{u}{v}\right]\ =\ \dfrac{vu'-uv'}{v^{2}}$
+
+5.\ $\dfrac{d}{dx}[c]\ =\ 0$
+
+6.\ $\dfrac{d}{dx}\left[u^{n}\right]\ =\ nu^{n-1}u'$
+
+7.\ $\dfrac{d}{dx}[x]\ =\ 1$
+
+8.\ $\dfrac{d}{dx}[|u|]\ =\ \dfrac{u}{|u|}(u'),\ u\neq 0$
+
+9.\ $\dfrac{d}{dx}[\ln u]\ =\ \dfrac{u'}{u}$
+
+10.\ $\dfrac{d}{dx}\left[e^{u}\right]\ =\ e^{u}u'$
+
+11.\ $\dfrac{d}{dx}[\log_{a}u]\ =\ \dfrac{u'}{(\ln a)u}$
+
+12.\ $\dfrac{d}{dx}\left[a^{u}\right]\ =\ (\ln a)a^{u}u'$
+
+13.\ $\dfrac{d}{dx}[\sin u]\ =\ (\cos u)u'$
+
+14.\ $\dfrac{d}{dx}[\cos u]\ =\ -(\sin u)u'$
+
+15.\ $\dfrac{d}{dx}[\tan u]\ =\ (\sec^{2} u)u'$
+
+16.\ $\dfrac{d}{dx}[\csc u]\ =\ -(\csc u \cot u)u'$
+
+17.\ $\dfrac{d}{dx}[\sec u]\ =\ (\sec u \tan u)u'$
+
+18.\ $\dfrac{d}{dx}[\cot u]\ =\ -(\csc^{2} u)u'$
+
+19.\ $\dfrac{d}{dx}[\arcsin u]\ =\ \dfrac{u'}{\sqrt{1-u^{2}}}$
+
+20.\ $\dfrac{d}{dx}[\arccos u]\ =\ \dfrac{-u'}{\sqrt{1-u^{2}}}$
+
+21.\ $\dfrac{d}{dx}[\arctan u]\ =\ \dfrac{u'}{1+u^{2}}$
+
+22.\ $\dfrac{d}{dx}[\text{arccsc}\ u]\ =\ \dfrac{-u'}{|u|\sqrt{u^{2}-1}}$
+
+23.\ $\dfrac{d}{dx}[\text{arcsec}\ u]\ =\ \dfrac{u'}{|u|\sqrt{u^{2}-1}}$
+
+24.\ $\dfrac{d}{dx}[\text{arccot}\ u]\ =\ \dfrac{-u'}{1+u^{2}}$
+
+25.\ $\dfrac{d}{dx}[\text{sinh}\ u]\ =\ (\text{cosh}\ u)u'$
+
+26.\ $\dfrac{d}{dx}[\text{cosh}\ u]\ =\ (\text{sinh}\ u)u'$
+
+27.\ $\dfrac{d}{dx}[\text{tanh}\ u]\ =\ (\text{sech}^{2}\ u)u'$
+
+28.\ $\dfrac{d}{dx}[\text{csch}\ u]\ =\ -(\text{csch}\ u\ \text{coth}\ u)u'$
+
+29.\ $\dfrac{d}{dx}[\text{sech}\ u]\ =\ -(\text{sech}\ u\ \text{tanh}\ u)u'$
+
+30.\ $\dfrac{d}{dx}[\text{coth}\ u]\ =\ -(\text{csch}^{2}\ u)u'$
+
+31.\ $\dfrac{d}{dx}\left[\text{sinh}^{-1}\ u\right]\ =\ \dfrac{u'}{\sqrt{u^{2}+1}}$
+
+32.\ $\dfrac{d}{dx}\left[\text{cosh}^{-1}\ u\right]\ =\ \dfrac{u'}{\sqrt{u^{2}-1}}$
+
+33.\ $\dfrac{d}{dx}\left[\text{tanh}^{-1}\ u\right]\ =\ \dfrac{u'}{1-u^{2}}$
+
+34.\ $\dfrac{d}{dx}\left[\text{csch}^{-1}\ u\right]\ =\ \dfrac{-u'}{|u|\sqrt{1+u^{2}}}$
+
+35.\ $\dfrac{d}{dx}\left[\text{sech}^{-1}\ u\right]\ =\ \dfrac{-u'}{|u|\sqrt{1-u^{2}}}$
+
+36.\ $\dfrac{d}{dx}\left[\text{coth}^{-1}\ u\right]\ =\ \dfrac{u'}{1-u^{2}}$
+
+
+\end{multicols}
+
+\newpage
+
+\textbf{Basic Integration Formulas}
+
+\setlength{\columnsep}{1.2cm}
+
+\begin{multicols*}{2}
+
+1.\ $\displaystyle\int kf(u)du\ =\ k\displaystyle\int f(u)du$
+
+2.\ $\displaystyle\int [f(u)\pm g(u)]du\ =\int f(u)du\pm\int g(u)du$
+
+3.\ $\displaystyle\int du\ =\ u + C$
+
+4.\ $\displaystyle\int u^{n}du\ =\ \dfrac{u^{n+1}}{n+1} + C$
+
+5.\ $\displaystyle\int \dfrac{du}{u}\ =\ \ln|u| + C$
+
+6.\ $\displaystyle\int e^{u}du\ =\ e^{u} + C$
+
+7.\ $\displaystyle\int a^{u}du\ =\ \left(\dfrac{1}{\ln a}\right)a^{u} + C$
+
+8.\ $\displaystyle\int \sin u\ du\ =\ -\cos u + C$
+
+9.\ $\displaystyle\int \cos u\ du\ =\ \sin u + C$
+
+10.\ $\displaystyle\int \tan u\ du\ =\ -\ln|\cos u| + C$
+
+\columnbreak
+
+11.\ $\displaystyle\int \csc u\ du\ =\ -\ln|\csc u + \cot u| + C$
+
+12.\ $\displaystyle\int \sec u\ du\ =\ \ln|\sec u + \tan u| + C$
+
+13.\ $\displaystyle\int \cot u\ du\ =\ \ln|\sin u| + C$
+
+14.\ $\displaystyle\int \sec^{2} u\ du\ =\ \tan u + C$
+
+15.\ $\displaystyle\int \csc^{2} u\ du\ =\ -\cot u + C$
+
+16.\ $\displaystyle\int \sec u\ \tan u\ du\ =\ \sec u + C$
+
+17.\ $\displaystyle\int \csc u\cot u\ du\ =\ -\csc u + C$
+
+18.\ $\displaystyle\int \dfrac{du}{\sqrt{a^{2}-u^{2}}}\ =\ \text{arcsin}\dfrac{u}{a} + C$
+
+19.\ $\displaystyle\int \dfrac{du}{a^{2}+u^{2}}\ =\ \dfrac{1}{a}\text{arctan}\dfrac{u}{a} + C$
+
+20.\ $\displaystyle\int \dfrac{du}{u\sqrt{u^{2}-a^{2}}}\ =\ \dfrac{1}{a}\text{arcsec}\dfrac{|u|}{a} + C$
+
+
+\end{multicols*}
+
+\newpage
+
+\chead{Integration Tables}
+
+\textbf{Integration Tables}
+
+\begin{small}
+
+\textbf{Forms Involving $u^{n}$}
+
+1.\ $\displaystyle\int u^{n}du\ =\ \dfrac{u^{n+1}}{n+1} + C,\ n\neq-1$
+
+2.\ $\displaystyle\int \dfrac{1}{u}du\ =\ \ln|u| + C$
+
+\textbf{Forms Involving $a+bu$}
+
+3.\ $\displaystyle\int \dfrac{u}{a+bu}du\ =\ \dfrac{1}{b^{2}}(bu-a\ln|a+bu|) + C$
+
+4.\ $\displaystyle\int \dfrac{u}{(a+bu)^{2}}du\ =\ \dfrac{1}{b^{2}}\left(\dfrac{a}{a+bu}\ +\ \ln|a+bu|\right) + C$
+
+5.\ $\displaystyle\int \dfrac{u}{(a+bu)^{n}}du\ =\ \dfrac{1}{b^{2}}\left[\dfrac{-1}{(n-2)(a+bu)^{n-2}}\ +\ \dfrac{a}{(n-1)(a+bu)^{n-1}}\right] + C$
+
+6.\ $\displaystyle\int \dfrac{u^{2}}{a+bu}du\ =\ \dfrac{1}{b^{3}}\left[-\dfrac{bu}{2}(2a-bu)\ +\ a^{2}\ln|a+bu|\right] + C$
+
+7.\ $\displaystyle\int \dfrac{u^{2}}{(a+bu)^{2}}du\ =\ \dfrac{1}{b^{3}}\left(bu\ -\ \dfrac{a^{2}}{a+bu}\ -\ 2u\ln|a+bu|\right) + C$
+
+8.\ $\displaystyle\int \dfrac{u^{2}}{(a+bu)^{3}}du\ =\ \dfrac{1}{b^{3}}\left[\dfrac{2a}{a+bu}\ -\ \dfrac{a^{2}}{2(a+bu)^{2}}\ +\ \ln|a+bu|\right] + C$
+
+9.\ $\displaystyle\int \dfrac{u^{2}}{(a+bu)^{n}}du\ =\ \dfrac{1}{b^{3}}\left[\dfrac{-1}{(n-3)(a+bu)^{n-3}}\ +\ \dfrac{2a}{(n-2)(a+bu)^{n-2}}\ -\ \dfrac{a^{2}}{(n-1)(a+bu)^{n-1}}\right] + C,\ n\neq 1, 2, 3$
+
+10.\ $\displaystyle\int \dfrac{1}{u(a+bu)}du\ =\ \dfrac{1}{a}\ln\left|\dfrac{u}{a+bu}\right| + C$
+
+11.\ $\displaystyle\int \dfrac{1}{u(a+bu)^{2}}du\ =\ \dfrac{1}{a}\left(\dfrac{1}{a+bu}\ +\ \dfrac{1}{a}\ln\left|\dfrac{u}{a+bu}\right|\right) + C$
+
+12.\ $\displaystyle\int \dfrac{1}{u^{2}(a+bu)}du\ =\ -\dfrac{1}{a}\left(\dfrac{1}{u}\ +\ \dfrac{b}{a}\ln\left|\dfrac{u}{a+bu}\right|\right) + C$
+
+13.\ $\displaystyle\int \dfrac{1}{u^{2}(a+bu)^{2}}du\ =\ -\dfrac{1}{a^{2}}\left[\dfrac{a+2bu}{u(a+bu)}\ +\ \dfrac{2b}{u}\ln\left|\dfrac{u}{a+bu}\right|\right) + C$
+
+\textbf{Forms Involving $a+bu+cu^{2},\ b^{2}\neq 4ac$}
+
+14.i.\ $\displaystyle\int \dfrac{1}{a+bu+cu^{2}}du\ \text{when}\ b^{2}<4ac\ =\ \dfrac{2}{\sqrt{4ac-b^{2}}}\text{arctan}\dfrac{2cu+b}{\sqrt{4ac-b^{2}}} + C$
+
+14.ii.\ $\displaystyle\int \dfrac{1}{a+bu+cu^{2}}du\ \text{when}\ b^{2}>4ac\ =\ \dfrac{1}{\sqrt{b^{2}-4ac}}\ln\left|\dfrac{2cu+b-\sqrt{b^{2}-4ac}}{2cu+b+\sqrt{b^{2}-4ac}}\right| + C$
+
+15.\ $\displaystyle\int \dfrac{u}{a+bu+cu^{2}}du\ =\ \dfrac{1}{2c}\left(\ln|a+bu+cu^{2}|\ -\ b\displaystyle\int \dfrac{1}{a+bu+cu^{2}}du\right)$
+
+\textbf{Forms Involving $\sqrt{a+bu}$}
+
+16.\ $\displaystyle\int u^{n}\sqrt{a+bu}du\ =\ \dfrac{2}{b(2n+3)}\left[u^{n}(a+bu)^{3/2}\ -\ na\displaystyle\int u^{n-1}\sqrt{a+bu}du\right]$
+
+17.i.\ $\displaystyle\int \dfrac{1}{u\sqrt{a+bu}}du\ \text{when}\ a>0\ =\ \dfrac{1}{\sqrt{a}}\ln\left|\dfrac{\sqrt{a+bu}-\sqrt{a}}{\sqrt{a+bu}+\sqrt{a}}\right| + C$
+
+17.ii.\ $\displaystyle\int \dfrac{1}{u\sqrt{a+bu}}du\ \text{when}\ a<0\ =\ \dfrac{2}{\sqrt{-a}}\text{arctan}\sqrt{\dfrac{a+bu}{-a}} + C$
+
+18.\ $\displaystyle\int \dfrac{1}{u^{n}\sqrt{a+bu}}du\ =\ \dfrac{-1}{a(n-1)}\left[\dfrac{a+bu}{u^{n-1}}\ +\ \dfrac{(2n-3)b}{2}\displaystyle\int \dfrac{1}{u^{n-1}\sqrt{a+bu}}du\right],\ n\neq 1$
+
+19.\ $\displaystyle\int \dfrac{\sqrt{a+bu}}{u}du\ =\ 2\sqrt{a+bu}\ +\ a\displaystyle\int \dfrac{1}{u\sqrt{a+bu}}du$
+
+20.\ $\displaystyle\int \dfrac{\sqrt{a+bu}}{u^{n}}du\ =\ \dfrac{-1}{a(n-1)}\left[\dfrac{(a+bu)^{3/2}}{u^{n-1}}\ +\ \dfrac{(2n-5)b}{2}\displaystyle\int \dfrac{\sqrt{a+bu}}{u^{n-1}}du\right],\ n\neq 1$
+
+21.\ $\displaystyle\int \dfrac{u}{\sqrt{a+bu}}du\ =\ \dfrac{-2(2a-bu)}{3b^{2}}\sqrt{a+bu} + C$
+
+22.\ $\displaystyle\int \dfrac{u^{n}}{\sqrt{a+bu}}du\ =\ \dfrac{2}{(2n+1)b}\left(u^{n}\sqrt{a+bu}\ -\ na\displaystyle\int \dfrac{u^{n-1}}{\sqrt{a+bu}}du\right)$
+
+\textbf{Forms Involving $a^{2}\pm u^{2},\ a>0$}
+
+23.\ $\displaystyle\int \dfrac{1}{a^{2}+u^{2}}du\ =\ \dfrac{1}{a}\text{arctan}\dfrac{u}{a} + C$
+
+24.\ $\displaystyle\int \dfrac{1}{u^{2}-a^{2}}du\ =\ -\displaystyle\int \dfrac{1}{a^{2}-u^{2}}du\ =\ \dfrac{1}{2a}\ln\left|\dfrac{u-a}{u+a}\right| + C$
+
+25.\ $\displaystyle\int \dfrac{1}{(a^{2}\pm u^{2})^{n}}du\ =\ \dfrac{1}{2a^{2}(n-1)}\left[\dfrac{u}{(a^{2}\pm u^{2})^{n-1}}\ +\ (2n-3)\displaystyle\int \dfrac{1}{(a^{2}\pm u^{2})^{n-1}}du\right],\ n\neq 1$
+
+\textbf{Forms Involving $\sqrt{u^{2}\pm a^{2}},\ a>0$}
+
+26.\ $\displaystyle\int \sqrt{u^{2}\pm a^{2}}du\ =\ \dfrac{1}{2}(u\sqrt{u^{2}\pm a^{2}}\ \pm\ a^{2}\ln|u\ +\ \sqrt{u^{2}\pm a^{2}}|) + C$
+
+27.\ $\displaystyle\int u^{2}\sqrt{u^{2}\pm a^{2}}du\ =\ \dfrac{1}{8}[u(2u^{2}\pm a^{2})\sqrt{u^{2}\pm a^{2}}\ -\ a^{4}\ln|u\ +\ \sqrt{u^{2}\pm a^{2}}|] + C$
+
+28.\ $\displaystyle\int \dfrac{\sqrt{u^{2}+a^{2}}}{u}du\ =\ \sqrt{u^{2}+a^{2}}\ -\ a\ln\left|\dfrac{a+\sqrt{u^{2}+a^{2}}}{u}\right| + C$
+
+29.\ $\displaystyle\int \dfrac{\sqrt{u^{2}-a^{2}}}{u}du\ =\ \sqrt{u^{2}-a^{2}}\ -\ a\text{arcsec}\dfrac{|u|}{a} + C$
+
+30.\ $\displaystyle\int \dfrac{\sqrt{u^{2}\pm a^{2}}}{u^{2}}du\ =\ \dfrac{-\sqrt{u^{2}\pm a^{2}}}{u}\ +\ \ln|u\ +\ \sqrt{u^{2}\pm a^{2}}| + C$
+
+31.\ $\displaystyle\int \dfrac{1}{\sqrt{u^{2}\pm a^{2}}}du\ =\ \ln|u\ +\ \sqrt{u^{2}\pm a^{2}}| + C$
+
+32.\ $\displaystyle\int \dfrac{1}{u\sqrt{u^{2}+a^{2}}}du\ =\ \dfrac{-1}{a}\ln\left|\dfrac{a+\sqrt{u^{2}+a^{2}}}{u}\right| + C$
+
+33.\ $\displaystyle\int \dfrac{1}{u\sqrt{u^{2}-a^{2}}}du\ =\ \dfrac{1}{a}\text{arcsec}\dfrac{|u|}{a} + C$
+
+34.\ $\displaystyle\int \dfrac{u^{2}}{\sqrt{u^{2}\pm a^{2}}}du\ =\ \dfrac{1}{2}(u\sqrt{u^{2}\pm a^{2}}\ \mp\ a^{2}\ln|u\ +\ \sqrt{u^{2}\pm a^{2}}|) + C$
+
+35.\ $\displaystyle\int \dfrac{1}{u^{2}\sqrt{u^{2}\pm a^{2}}}du\ =\ \mp\dfrac{\sqrt{u^{2}\pm a^{2}}}{a^{2}u} + C$
+
+36.\ $\displaystyle\int \dfrac{1}{(u^{2}\pm a^{2})^{3/2}}du\ =\ \dfrac{\pm u}{a^{2}\sqrt{u^{2}\pm a^{2}}} + C$
+
+\textbf{Forms Involving $\sqrt{a^{2}-u^{2}},\ a>0$}
+
+37.\ $\displaystyle\int \sqrt{a^{2}-u^{2}}du\ =\ \dfrac{1}{2}\left(u\sqrt{a^{2}-u^{2}}\ +\ a^{2}\text{arcsin}\dfrac{u}{a}\right) + C$
+
+38.\ $\displaystyle\int u^{2}\sqrt{a^{2}-u^{2}}du\ =\ \dfrac{1}{8}\left[u(2u^{2}-a^{2})\sqrt{a^{2}-u^{2}}\ +\ a^{4}\text{arcsin}\dfrac{u}{a}\right] + C$
+
+39.\ $\displaystyle\int \dfrac{\sqrt{a^{2}-u^{2}}}{u}du\ =\ \sqrt{a^{2}-u^{2}}\ -\ a\ln\left|\dfrac{a+\sqrt{a^{2}-u^{2}}}{u}\right| + C$
+
+40.\ $\displaystyle\int \dfrac{\sqrt{a^{2}-u^{2}}}{u^{2}}du\ =\ \dfrac{-\sqrt{a^{2}-u^{2}}}{u}\ -\ \text{arcsin}\dfrac{u}{a}\ +\ C$
+
+41.\ $\displaystyle\int \dfrac{1}{\sqrt{a^{2}-u^{2}}}du\ =\ \text{arcsin}\dfrac{u}{a} + C$
+
+42.\ $\displaystyle\int \dfrac{1}{u\sqrt{a^{2}-u^{2}}}du\ =\ \dfrac{-1}{a}\ln\left|\dfrac{a+\sqrt{a^{2}-u^{2}}}{u}\right| + C$
+
+43.\ $\displaystyle\int \dfrac{u^{2}}{\sqrt{a^{2}-u^{2}}}du\ =\ \dfrac{1}{2}\left(-u\sqrt{a^{2}-u^{2}}\ +\ a^{2}\text{arcsin}\dfrac{u}{a}\right) + C$
+
+44.\ $\displaystyle\int \dfrac{1}{u^{2}\sqrt{a^{2}-u^{2}}}du\ =\ \dfrac{-\sqrt{a^{2}-u^{2}}}{a^{2}u} + C$
+
+45.\ $\displaystyle\int \dfrac{1}{(a^{2}-u^{2})^{3/2}}du\ =\ \dfrac{u}{a^{2}\sqrt{a^{2}-u^{2}}} + C$
+
+\textbf{Forms Involving $\sin u$ or $\cos u$}
+
+46.\ $\displaystyle\int \sin u\ du\ =\ -\cos u\ +\ C$
+
+47.\ $\displaystyle\int \cos u\ du\ =\ \sin u\ +\ C$
+
+48.\ $\displaystyle\int \sin^{2} u\ du\ =\ \dfrac{1}{2}(u\ -\ \sin u \cos u) + C$
+
+49.\ $\displaystyle\int \cos^{2} u\ du\ =\ \dfrac{1}{2}(u\ +\ \sin u \cos u) + C$
+
+50.\ $\displaystyle\int \sin^{n} u\ du\ =\ -\dfrac{\sin^{n-1} u \cos u}{n}\ +\ \dfrac{n-1}{n}\displaystyle\int \sin^{n-2} u\ du$
+
+51.\ $\displaystyle\int \cos^{n} u\ du\ =\ \dfrac{\cos^{n-1} u \sin u}{n}\ +\ \dfrac{n-1}{n}\displaystyle\int \cos^{n-2} u\ du$
+
+52.\ $\displaystyle\int u\sin u\ du\ =\ \sin u\ -\ u \cos u\ +\ C$
+
+53.\ $\displaystyle\int u\cos u\ du\ =\ \cos u\ +\ u \sin u\ +\ C$
+
+54.\ $\displaystyle\int u^{n}\sin u\ du\ =\ -u^{n}\cos u\ +\ n\displaystyle\int u^{n-1}\cos u\ du$
+
+55.\ $\displaystyle\int u^{n}\cos u\ du\ =\ u^{n}\sin u\ -\ n\displaystyle\int u^{n-1}\sin u\ du$
+
+56.\ $\displaystyle\int \dfrac{1}{1\pm \sin u}du\ =\ \tan u\ \mp\ \sec u\ +\ C$
+
+57.\ $\displaystyle\int \dfrac{1}{1\pm \cos u}du\ =\ -\cot u\ \pm\ \csc u\ +\ C$
+
+58.\ $\displaystyle\int \dfrac{1}{\sin u \cos u}du\ =\ \ln|\tan u| + C$
+
+\textbf{Forms Involving $\tan u$, $\cot u$, $\sec u$, or $\csc u$}
+
+59.\ $\displaystyle\int \tan u\ du\ =\ -\ln|\cos u|\ +\ C$
+
+60.\ $\displaystyle\int \cot u\ du\ =\ \ln|\sin u|\ +\ C$
+
+61.\ $\displaystyle\int \sec u\ du\ =\ \ln|\sec u\ +\ \tan u| + C$
+
+62.\ $\displaystyle\int \csc u\ du\ =\ \ln|\csc u\ -\ \cot u| + C\ =\ -\ln|\csc u\ +\ \cot u| + C$
+
+63.\ $\displaystyle\int \tan^{2} u\ du\ =\ -u\ +\ \tan u\ +\ C$
+
+64.\ $\displaystyle\int \cot^{2} u\ du\ =\ -u\ -\ \cot u\ +\ C$
+
+65.\ $\displaystyle\int \sec^{2} u\ du\ =\ \tan u\ +\ C$
+
+66.\ $\displaystyle\int \csc^{2} u\ du\ =\ -\cot u\ +\ C$
+
+67.\ $\displaystyle\int \tan^{n} u\ du\ =\ \dfrac{\tan^{n-1}u}{n-1}\ -\ \displaystyle\int \tan^{n-2}u\ du,\ n\neq 1$
+
+68.\ $\displaystyle\int \cot^{n} u\ du\ =\ -\dfrac{\cot^{n-1}u}{n-1}\ -\ \displaystyle\int \cot^{n-2}u\ du,\ n\neq 1$
+
+69.\ $\displaystyle\int \sec^{n} u\ du\ =\ \dfrac{\sec^{n-2}u\tan u}{n-1}\ +\ \dfrac{n-2}{n-1}\displaystyle\int \sec^{n-2}u\ du\,\ n\neq 1$
+
+70.\ $\displaystyle\int \csc^{n} u\ du\ =\ -\dfrac{\csc^{n-2}u\cot u}{n-1}\ +\ \dfrac{n-2}{n-1}\displaystyle\int \csc^{n-2}u\ du\,\ n\neq 1$
+
+71.\ $\displaystyle\int \dfrac{1}{1\pm \tan u}du\ =\ \dfrac{1}{2}(u\ \pm\ \ln|\cos u\ \pm\ \sin u|) + C$
+
+72.\ $\displaystyle\int \dfrac{1}{1\pm \cot u}du\ =\ \dfrac{1}{2}(u\ \mp\ \ln|\sin u\ \pm\ \cos u|) + C$
+
+73.\ $\displaystyle\int \dfrac{1}{1\pm \sec u}du\ =\ u\ +\ \cot u\ \mp\ \csc u\ +\ C$
+
+74.\ $\displaystyle\int \dfrac{1}{1\pm \csc u}du\ =\ u\ -\ \tan u\ \pm\ \sec u\ +\ C$
+
+\textbf{Forms Involving Inverse Trigonometric Functions}
+
+75.\ $\displaystyle\int \text{arcsin}\ u\ du\ =\ u\ \text{arcsin}\ u\ +\ \sqrt{1-u^{2}}\ +\ C$
+
+76.\ $\displaystyle\int \text{arccos}\ u\ du\ =\ u\ \text{arccos}\ u\ -\ \sqrt{1-u^{2}}\ +\ C$
+
+77.\ $\displaystyle\int \text{arctan}\ u\ du\ =\ u\ \text{arctan}\ u\ -\ \dfrac{1}{2}\ln\sqrt{1+u^{2}}\ +\ C$
+
+78.\ $\displaystyle\int \text{arccot}\ u\ du\ =\ u\ \text{arccot}\ u\ +\ \dfrac{1}{2} \ln\sqrt{1+u^{2}}\ +\ C$
+
+79.\ $\displaystyle\int \text{arcsec}\ u\ du\ =\ u\ \text{arcsec}\ u\ -\ \ln|u\ +\ \sqrt{u^{2}-1}|\ +\ C$
+
+80.\ $\displaystyle\int \text{arccsc}\ u\ du\ =\ u\ \text{arccsc}\ u\ +\ \ln|u\ +\ \sqrt{u^{2}-1}|\ +\ C$
+
+\textbf{Forms Involving $e^{u}$}
+
+81.\ $\displaystyle\int e^{u}du\ =\ e^{u}\ +\ C$
+
+82.\ $\displaystyle\int ue^{u}du\ =\ (u-1)e^{u}\ +\ C$
+
+83.\ $\displaystyle\int u^{n}e^{u}du\ =\ u^{n}e^{u}\ -\ n\displaystyle\int u^{n-1}e^{u}du$
+
+84.\ $\displaystyle\int \dfrac{1}{1+e^{u}}du\ =\ u\ -\ \ln(1\ +\ e^{u})\ +\ C$
+
+85.\ $\displaystyle\int e^{au}\sin bu\ du\ =\ \dfrac{e^{au}}{a^{2}+b^{2}}(a\sin bu\ -\ b\cos bu)\ +\ C$
+
+86.\ $\displaystyle\int e^{au}\cos bu\ du\ =\ \dfrac{e^{au}}{a^{2}+b^{2}}(a\cos bu\ +\ b\sin bu)\ +\ C$
+
+\textbf{Forms Involving $\ln u$}
+
+87.\ $\displaystyle\int \ln u\ du\ =\ u(-1\ +\ \ln u)\ +\ C$
+
+88.\ $\displaystyle\int u\ln u\ du\ =\ \dfrac{u^{2}}{4}(-1\ +\ 2\ln u)\ +\ C$
+
+89.\ $\displaystyle\int u^{n}\ln u\ du\ =\ \dfrac{u^{n+1}}{(n+1)^{2}}[-1\ +\ (n+1)\ln u]\ +\ C,\ n\neq 1$
+
+90.\ $\displaystyle\int (\ln u)^{2}du\ =\ u[2\ -\ 2\ln u\ +\ (\ln u)^{2}]\ +\ C$
+
+91.\ $\displaystyle\int (\ln u)^{n}du\ =\ u(\ln u)^{n}\ -\ n\displaystyle\int (\ln u)^{n-1}du$
+
+\textbf{Forms Involving Hyperbolic Functions}
+
+92.\ $\displaystyle\int \text{cosh}\ u\ du\ =\ \text{sinh}\ u\ +\ C$
+
+93.\ $\displaystyle\int \text{sinh}\ u\ du\ =\ \text{cosh}\ u\ +\ C$
+
+94.\ $\displaystyle\int \text{sech}^{2}\ u\ du\ =\ \text{tanh}\ u\ +\ C$
+
+95.\ $\displaystyle\int \text{csch}^{2}\ u\ du\ =\ -\text{coth}\ u\ +\ C$
+
+96.\ $\displaystyle\int \text{sech}\ u\ \text{tanh}\ u\ du\ =\ -\text{sech}\ u\ +\ C$
+
+97.\ $\displaystyle\int \text{csch}\ u\ \text{coth}\ u\ du\ =\ -\text{csch}\ u\ +\ C$
+
+\textbf{Forms Involving Inverse Hyperbolic Functions (in logarithmic form)}
+
+98.\ $\displaystyle\int \dfrac{du}{\sqrt{u^{2}\pm a^{2}}}\ =\ \ln(u\ +\ \sqrt{u^{2}\pm a^{2}}) + C$
+
+99.\ $\displaystyle\int \dfrac{du}{a^{2}-u^{2}}\ =\ \dfrac{1}{2a}\ln\left|\dfrac{a+u}{a-u}\right| + C$
+
+100.\ $\displaystyle\int \dfrac{du}{u\sqrt{a^{2}\pm u^{2}}}\ =\ -\dfrac{1}{a}\ln\dfrac{a\ +\ \sqrt{a^{2}+u^{2}}}{|u|} + C$
+
+\end{small}
+
+\newpage
+
+\chead{Geometry Formulas}
+
+\textbf{Triangle}
+
+\hspace{0.1in} $h = a\ \text{sin}\ \theta$
+
+\hspace{0.1in} $\text{Area} = \dfrac{1}{2}bh$
+
+\hspace{0.1in} Law of Cosines: $c^{2} = a^{2} + b^{2} - 2ab\ \text{cos}\ \theta$
+
+\textbf{Right Triangle}
+
+\hspace{0.1in} Pythagorean Theorem: $c^{2} = a^{2} + b^{2}$
+
+\textbf{Equilateral Triangle}
+
+\hspace{0.1in} $h = \dfrac{\sqrt{3}s}{2}$
+
+\hspace{0.1in} $\text{Area} = \dfrac{\sqrt{3}s^{2}}{4}$
+
+\textbf{Parallelogram}
+
+\hspace{0.1in} $\text{Area} = bh$
+
+\textbf{Trapezoid}
+
+\hspace{0.1in} $\text{Area} = \dfrac{h}{2}(a + b)$
+
+\textbf{Circle}
+
+\hspace{0.1in} $\text{Area} = \pi r^{2}$
+
+\hspace{0.1in} $\text{Circumference} = 2\pi r$
+
+\textbf{Sector of Circle}
+
+\hspace{0.1in} $\text{Area} = \dfrac{\theta r^{2}}{2}$ ($\theta$ in radians)
+
+\hspace{0.1in} $s = r\theta$ ($\theta$ in radians)
+
+\textbf{Circular Ring}
+
+\hspace{0.1in} Using $p$ = average radius, and $w$ = width of ring: $\text{Area} = \pi(R^{2} - r^{2}) = 2\pi pw$
+
+\textbf{Sector of Circular Ring}
+
+\hspace{0.1in} Using $p$ = average radius, $w$ = width of ring, and $\theta$ in radians: $\text{Area} = \theta pw$
+
+\textbf{Ellipse}
+
+\hspace{0.1in} $\text{Area} = \pi ab$
+
+\hspace{0.1in} $\text{Circumference} = 2\pi\sqrt{\dfrac{a^{2} + b^{2}}{2}}$
+
+\textbf{Cone}
+
+\hspace{0.1in} Using $A$ = area of base: $\text{Volume} = \dfrac{Ah}{3}$
+
+\textbf{Right Circular Cone}
+
+\hspace{0.1in} $\text{Volume} = \dfrac{\pi r^{2}h}{3}$
+
+\hspace{0.1in} $\text{Lateral Surface Area} = \pi r\sqrt{r^{2} + h^{2}}$
+
+\textbf{Frustum of Right Circular Cone}
+
+\hspace{0.1in} $\text{Volume} = \dfrac{\pi(r^{2} + rR + R^{2})h}{3}$
+
+\hspace{0.1in} $\text{Lateral Surface Area} = \pi s(R + r)$
+
+\textbf{Right Circular Cylinder}
+
+\hspace{0.1in} $\text{Volume} = \pi r^{2}h$
+
+\hspace{0.1in} $\text{Lateral Surface Area} = 2\pi rh$
+
+\textbf{Sphere}
+
+\hspace{0.1in} $\text{Volume} = \dfrac{4}{3}\pi r^3$
+
+\hspace{0.1in} $\text{Surface Area} = 4\pi r^{2}$
+
+\textbf{Wedge}
+
+\hspace{0.1in} Using $A$ = area of upper face, and $B$ = area of base: $A = B\ sec\ \theta$
+
+\newpage
+
+\chead{Calculus}
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 3 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Rolle's Theorem}
+
+\hspace{0.1in} Let $f$ be continuous on the closed interval $[a,\ b]$ and differentiable on the open interval $(a,\ b)$.  If $f(a)\ =\ f(b)$, then there is at least one number $c$ in $(a,\ b)$ such that $f'(c)\ =\ 0$.
+
+\textbf{The Mean Value Theorem}
+
+\hspace{0.1in} If $f$ is continuous on the closed interval $[a,\ b]$ and differentiable on the open interval $(a,\ b)$, then there exists a number $c$ in $(a,\ b)$ such that:
+
+\hspace{2.2in} $f'(c)\ =\ \dfrac{f(b)\ -\ f(a)}{b\ -\ a}$
+
+\textbf{Newton's Method for Approximating the Zeros of a Function}
+
+\hspace{0.1in} Let $f(c)\ =\ 0$, where $f$ is differentiable on an open interval containing $c$.  Then, to approximate $c$, use these steps:
+
+\hspace{0.2in} Make an initial estimate $x_{1}$ that is close to $c$. (A graph is helpful.)
+
+\hspace{0.2in} Determine a new approximation:
+
+\hspace{2.5in} $x_{n+1}\ =\ x_{n}\ -\ \dfrac{f(x_{n})}{f'(x_{n})}$
+
+\hspace{0.2in} When $|x_{n}\ -\ x_{n+1}|$ is within the desired accuracy, let $x_{n+1}$ serve as the final approximation.  Otherwise, return to Step 2 and calculate a new approximation.
+
+\hspace{0.1in} Each successive application of this procedure is called an \textbf{iteration}.
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 4 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Summation Formulas}
+
+1. $\sum\limits_{i=1}^{n} c = cn$  
+
+2. $\sum\limits_{i=1}^{n} i = \dfrac{n(n+1)}{2}$  
+
+3. $\sum\limits_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}{6}$  
+
+4. $\sum\limits_{i=1}^{n} i^3 = \dfrac{n^2(n+1)^2}{4}$
+
+\vspace{0.2in}
+\textbf{Mean Value Theorem for Integrals}
+
+If f is continuous on the closed interval [a,b], then there exists a number c in the closed interval [a,b] such that:
+
+\vspace{-0.3in}
+\[\int_{a}^{b} f(x) \,dx=f(c) \cdot (b-a)\]
+
+\textbf{Definition of the Average Value of a Function on an Integral}
+
+If f is integrable on the closed interval [a,b] then the average value of f on the interval is:
+
+\vspace{-0.5in}
+\[\dfrac{1}{b-a}\int_{a}^{b} f(x) \,dx\]
+
+\vspace{1.5in}
+\underline{\textbf{\huge Chapter 5 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{L'H$\hat{o}$pital's Rule}
+
+\vspace{-0.1in}
+\hspace{0.1in} Let $f$ and $g$ be functions that are differentiable on an open interval $(a,\ b)$ containing $c$, except possibly at $c$ itself.  Assume that $g'(x)\ \neq\ 0$ for all $x$ in $(a,\ b)$, except possibly at $c$ itself.  If the limit of $f(x)/g(x)$ as $x$ approaches $c$ produces the indeterminate form $0/0$, then:
+
+\hspace{0.2in} $\displaystyle\lim_{x\rightarrow c}\dfrac{f(x)}{g(x)}\ =\ \displaystyle\lim_{x\rightarrow c}\dfrac{f'(x)}{g'(x)}$
+
+\hspace{0.1in} provided the limit on the right exists (or is infinite).  This result also applies when the limit of $f(x)/g(x)$ as $x$ approaches $c$ produces any one of the indeterminate forms $\infty/\infty,\ (-\infty)/\infty,\ \infty/(-\infty),\ \text{or}\ (-\infty)/(-\infty)$.
+
+\textbf{Hyperbolic Identities}
+
+\hspace{0.1in} $\text{cosh}^{2}x\ -\ \sinh ^{2}x\ =\ 1$
+
+\hspace{0.1in} $\tanh^{2}x\ +\ \text{sech}^{2}x\ =\ 1$
+
+\hspace{0.1in} $\text{coth}^{2}x\ -\ \text{csch}^{2}x\ =\ 1$
+
+\hspace{0.1in} $\sinh^{2}x\ =\ \dfrac{-1\ +\ \text{cosh}2x}{2}$
+
+\hspace{0.1in} $\text{cosh}^{2}x\ =\ \dfrac{1\ +\ \text{cosh}2x}{2}$
+
+\hspace{0.1in} $\sinh 2x\ =\ 2\sinh x\text{cosh}x$
+
+\hspace{0.1in} $\text{cosh}2x\ =\ \text{cosh}^{2}x\ +\ \sinh ^{2}x$
+
+\hspace{0.1in} $\sinh (x\ +\ y)\ =\ \sinh x\text{cosh}y\ +\ \text{cosh}x\sinh y$
+
+\hspace{0.1in} $\sinh (x\ -\ y)\ =\ \sinh x\text{cosh}y\ -\ \text{cosh}x\sinh y$
+
+\hspace{0.1in} $\text{cosh}(x\ +\ y)\ =\ \text{cosh}x\text{cosh}y\ +\ \sinh x\sinh y$
+
+\hspace{0.1in} $\text{cosh}(x\ -\ y)\ =\ \text{cosh}x\text{cosh}y\ -\ \sinh x\sinh y$
+
+\textbf{Inverse Hyperbolic Functions}
+
+\hspace{0.1in} $\sinh ^{-1}x\ =\ \text{ln}(x\ +\ \sqrt{x^{2}\ +\ 1}),\ \text{Domain:}\ (-\infty,\ \infty)$
+
+\hspace{0.1in} $\text{cosh}^{-1}x\ =\ \text{ln}(x\ +\ \sqrt{x^{2}\ -\ 1}),\ \text{Domain:}\ [-1,\ \infty)$
+
+\hspace{0.1in} $\tanh ^{-1}x\ =\ \dfrac{1}{2}\text{ln}\dfrac{1\ +\ x}{1\ -\ x},\ \text{Domain:}\ (-1,\ 1)$
+
+\hspace{0.1in} $\text{coth}^{-1}x\ =\ \dfrac{1}{2}\text{ln}\dfrac{x\ +\ 1}{x\ -\ 1},\ \text{Domain:}\ (-\infty,\ -1)\ \cup\ (1,\ \infty)$
+
+\hspace{0.1in} $\text{sech}^{-1}x\ =\ \text{ln}\dfrac{1\ +\ \sqrt{1\ -\ x^{2}}}{x},\ \text{Domain:}\ (0,\ 1]$
+
+\hspace{0.1in} $\text{csch}^{-1}x\ =\ \text{ln}\left(\dfrac{1}{x}\ +\ \dfrac{\sqrt{1\ +\ x^{2}}}{|x|}\right),\ \text{Domain:}\ (-\infty,\ 0)\ \cup\ (0,\ \infty)$
+
+\textbf{Differentiation and Integration Involving Inverse Hyperbolic Functions}
+
+\hspace{0.1in} Let $u$ be a differentiable function of $x$.
+
+\hspace{0.2in} $\dfrac{d}{dx}[\sinh ^{-1}u]\ =\ \dfrac{u'}{\sqrt{u^{2}\ +\ 1}}$
+
+\hspace{0.2in} $\dfrac{d}{dx}[\text{cosh}^{-1}u]\ =\ \dfrac{u'}{\sqrt{u^{2}\ -\ 1}}$
+
+\hspace{0.2in} $\dfrac{d}{dx}[\tanh ^{-1}u]\ =\ \dfrac{u'}{1\ -\ u^{2}},\ |x|\ <\ 1$
+
+\hspace{0.2in} $\dfrac{d}{dx}[\text{coth}^{-1}u]\ =\ \dfrac{u'}{1\ -\ u^{2}},\ |x|\ >\ 1$
+
+\hspace{0.2in} $\dfrac{d}{dx}[\text{sech}^{-1}u]\ =\ \dfrac{-u'}{u\sqrt{1\ -\ u^{2}}}$
+
+\hspace{0.2in} $\dfrac{d}{dx}[\text{csch}^{-1}u]\ =\ \dfrac{-u'}{|u|\sqrt{1\ +\ u^{2}}}$
+
+\hspace{0.2in} $\displaystyle\int\dfrac{du}{\sqrt{u^{2}\ \pm\ a^{2}}}\ =\ \text{ln}(u\ +\ \sqrt{u^{2}\ \pm\ a^{2}})\ +\ C$
+
+\hspace{0.2in} $\displaystyle\int\dfrac{du}{a^{2}\ -\ u^{2}}\ =\ \dfrac{1}{2a}\text{ln}\left|\dfrac{a\ +\ u}{a\ -\ u}\right|\ +\ C$
+
+\hspace{0.2in} $\displaystyle\int\dfrac{du}{u\sqrt{a^{2}\ \pm\ u^{2}}}\ =\ -\dfrac{1}{a}\text{ln}\dfrac{a\ +\ \sqrt{a^{2}\ \pm\ u^{2}}}{|u|}\ +\ C$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 6 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\vspace{-0.1in}
+\textbf{Euler's Method}
+
+\vspace{-0.2in}
+\hspace{0.1in} {\large Given that $y'\ =\ F(x,\ y)$ and a fixed distance $h$, approximate the curve $y$ by starting at the point $(x_{0},\ y_{0})$ and repeating the process:}
+
+\hspace{0.2in} {\large $x_{1}\ =\ x_{0}\ +\ h$ \phantom{ } \phantom{ } \phantom{ } $y_{1}\ =\ y_{0}\ +\ hF(x_{0},\ y_{0})$}
+
+\hspace{0.2in} {\large $x_{2}\ =\ x_{1}\ +\ h$ \phantom{ } \phantom{ } \phantom{ } $y_{2}\ =\ y_{1}\ +\ hF(x_{1},\ y_{1})$}
+
+\hspace{0.2in} \phantom{ } \vdots
+
+\vspace{-0.4in}
+\hspace{0.2in} {\large $x_{n}\ =\ x_{n-1}\ +\ h$ \phantom{ } \phantom{ } \phantom{ } $y_{n}\ =\ y_{n-1}\ +\ hF(x_{n-1},\ y_{n-1})$}
+
+
+\textbf{Exponential Growth and Decay Model}
+
+\hspace{0.1in} {\large If $y$ is a differentiable function of $t$ such that $y\ >\ 0$ and $y'\ =\ ky$ for some constant $k$, then:}
+
+\vspace{-0.1in}
+\hspace{2.7in} $y\ =\ Ce^{kt}$
+
+\hspace{0.1in} {\large where $C$ is the \textbf{initial value} of $y$, and $k$ is the \textbf{proportionality constant}.  \textbf{Exponential growth} occurs when $k\ >\ 0$, and \textbf{exponential decay} occurs when $k\ <\ 0$.}
+
+\textbf{Logisitic Differential Equation}
+
+\hspace{2.5in} $\dfrac{dy}{dt}\ =\ ky\left(1\ -\ \dfrac{y}{L}\right)$
+
+\hspace{2.5in} $y\ =\ \dfrac{L}{1\ +\ be^{-kt}}$
+
+\textbf{Solution of a First-Order Linear Differential Equation}
+
+\hspace{0.1in} An integrating factor for the first-order linear differential equation:
+
+\hspace{2.0in} $y'\ +\ P(x)y\ =\ Q(x)$
+
+\hspace{0.1in} is $u(x)\ =\ e^{\int P(x)dx}$.  The solution of the differential equation is:
+
+\hspace{1.5in} $ye^{\int P(x)dx}\ =\ \displaystyle\int Q(x)e^{\int P(x)dx}dx\ +\ C$
+
+\textbf{Differential Equation for Electrical Circuits}
+
+\hspace{2.5in} $L\dfrac{dI}{dt}\ +\ RI\ =\ E$
+
+\hspace{0.1in} where $I$ is current, $R$ is resistance, $L$ is inductance, and $E$ is electromotive force (voltage).
+
+\textbf{Soluble Concentrate Formula}
+
+\vspace{-0.1in}
+\hspace{0.1in}{\large Consider a tank that at time $t\ =\ 0$ contains $v_{0}$ gallons of solution of which, by weight, $q_{0}$ pounds is soluble concentrate.  Another solution containing $q_{1}$ pounds of the concentrate per gallon is running into the tank at the rate of $r_{1}$ gallons per minute.  The solution in the tank is kep well stirred and is withdrawn at the rate of $r_{2}$ gallons per minute.  Let $Q$ be the amount of concentrate (in pounds) in the solution at any time $t$.}
+
+\hspace{2.5in} $\dfrac{dQ}{dt}\ +\ \dfrac{r_{2}Q}{v_{0} + (r_{1} - r_{2})t}\ =\ q_{1}r_{1}$
+
+\vspace{-0.1in}
+
+\underline{\textbf{\huge Chapter 6 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Areas of a Region Between Two Curves}
+
+\hspace{0.1in} If $f$ and $g$ are continuous on $[a,\ b]$ and $g(x)\ \leq\ f(x)$ for all $x$ in $[a,\ b]$, then the area of the region bounded by the graphs of $f$ and $g$ and the vertical lines $x\ =\ a$ and $x\ =\ b$ is:
+
+\hspace{2.5in} $A\ =\ \displaystyle\int^{b}_{a}[f(x)\ -\ g(x)]dx$
+
+\textbf{The Disk/Washer Method}
+
+\hspace{2.5in} $V\ =\ \pi\displaystyle\int^{b}_{a}([R(x)]^{2}\ -\ [r(x)]^{2})dx$
+
+\textbf{Volumes of Solids with Known Cross Sections}
+
+\hspace{0.1in} \textbf{1.} For cross sections of area $A(x)$ taken perpendicular to the $x$-axis:
+
+\hspace{2.0in} $\text{Volume}\ =\ \displaystyle\int^{b}_{a}A(x)dx$
+
+\hspace{0.1in} \textbf{2.} For cross sections of area $A(y)$ taken perpendicular to the $y$-axis:
+
+\hspace{2.0in} $\text{Volume}\ =\ \displaystyle\int^{d}_{c}A(y)dy$
+
+\textbf{The Shell Method}
+\vspace{-0.1in}
+
+\hspace{0.1in} To find the volume of a solid of revolution with the \textbf{shell method}, use one of the formulas below.
+
+\hspace{0.2in} \textbf{Horizontal Axis of Revolution} \hspace{0.5in} $\text{Volume}\ =\ V\ =\ 2\pi\displaystyle\int^{d}_{c}p(y)h(y)dy$
+
+\hspace{0.2in} \textbf{Vertical Axis of Revolution} \hspace{0.5in} $\text{Volume}\ =\ V\ =\ 2\pi\displaystyle\int^{b}_{a}p(x)h(x)dx$
+
+\textbf{Definition of Arc Length}
+
+\hspace{0.1in} Let the function $y\ =\ f(x)$ represent a smooth curve on the interval $[a,\ b]$.  The \textbf{arc length} of $f$ between $a$ and $b$ is:
+
+\hspace{2.5in} $s\ =\ \displaystyle\int^{b}_{a}\sqrt{1\ +\ [f'(x)]^{2}}dx$
+
+\hspace{0.1in} Similarly, for a smooth curve $x\ =\ g(y)$, the \textbf{arc length} of $g$ between $c$ and $d$ is:
+
+\hspace{2.5in} $s\ =\ \displaystyle\int^{d}_{c}\sqrt{1\ +\ [g'(x)]^{2}}dy$
+
+\vspace{0.25in}
+
+\textbf{Definition of the Area of a Surface of Revolution}
+
+\hspace{0.1in} Let $y\ =\ f(x)$ have a continuous derivative on the interval $[a,\ b]$.  The area $S$ of the surface of revolution formed by revolving the graph of $f$ about a horizontal or vertical axis is:
+
+\hspace{1.5in} $S\ =\ 2\pi\displaystyle\int^{b}_{a}r(x)\sqrt{1\ +\ [f'(x)]^{2}}dx$ \begin{Large} $y$ is a function of $x$\end{Large}
+
+\hspace{0.1in} where $r(x)$ is the distance between the graph of $f$ and the axis of revolution.  If $x\ =\ g(y)$ on the interval $[c,\ d]$, then the surface area is:
+
+\hspace{1.5in} $S\ =\ 2\pi\displaystyle\int^{d}_{c}r(y)\sqrt{1\ +\ [g'(y)]^{2}}dy$ \begin{Large} $x$ is a function of $y$\end{Large}
+
+\hspace{0.1in} where $r(y)$ is the distance between the graph of $g$ and the axis of revolution.
+
+\vspace{1.6in}
+\textbf{Theorem of Pappus}
+
+\hspace{0.1in}  Let $R$ be a region in a plane and let $L$ be a line in the same plane such that $L$ does not intersect the interior of $R$.  If $r$ is the distance between the centroid of $R$ and the line, then the volume $V$ of the solid of revolution formed by revolving $R$ about the line is:
+
+\hspace{2.8in} $V\ =\ 2\pi rA$
+
+\hspace{0.1in} where $A$ is the area of $R$. (Note that $2\pi r$ is the distance travelled by the centroid as the region is revolved about that line.)
+
+\vspace{0.4in}
+\textbf{Definition of Work Done by a Variable Force}
+
+\hspace{0.1in} If an object is moved along a straight line by a continuously varying force $F(x)$, then the \textbf{work} $W$ done by the force as the object is moved from:
+
+\hspace{2.5in} $x\ =\ a$\ \ to\ \ $x\ =\ b$
+
+\hspace{0.1in} is given by:
+
+\hspace{2.0in} $W\ =\ \displaystyle\lim_{\|\Delta\|\rightarrow 0}\ \displaystyle\sum^{n}_{i=1}\Delta W_{i}\ =\ \displaystyle\int^{b}_{a}F(x)dx$
+
+\textbf{Laws of Physics}
+
+Hookes Law: \text\large{F=kd}
+
+Newton's Law of Gravitation: $F=G\dfrac{m_1m_2}{d^2}$
+
+\vspace{0.5in}
+\textbf{Moments and Center of Mass: Two-Dimensional System}
+
+\hspace{0.1in} Let the point masses $m_{1},\ m_{2},\ ...,\ m_{n}$ be located at $(x_{1},y_{1}),\ (x_{2},y_{2}),\ ...,\ (x_{n},y_{n})$.
+
+\hspace{0.2in} 1. The moment about the $y$-axis is: $M_{y}\ =\ m_{1}x_{1}\ +\ m_{2}x_{2}\ +\ \cdots\ +\ m_{n}x_{n}$
+
+\hspace{0.2in} 2. The moment about the $x$-axis is: $M_{x}\ =\ m_{1}y_{1}\ +\ m_{2}y_{2}\ +\ \cdots\ +\ m_{n}y_{n}$
+
+\hspace{0.2in} 3. The center of mass $(\bar{x},\ \bar{y})$, or center of gravity, is:
+
+\hspace{2.0in} $\bar{x}\ =\ \dfrac{M_{y}}{m}\ \ \text{and}\ \ \bar{y}\ =\ \dfrac{M_{x}}{m}$
+
+\hspace{0.2in} where $m\ =\ m_{1}\ +\ m_{2}\ +\ \cdots\ +\ m_{n}$ is the total mass of the system.
+
+\textbf{Moments and Center of Mass of a Planar Lamina}
+
+\hspace{0.1in} Let $f$ and $g$ be continuous functions such that $f(x)\ \geq\ g(x)$ on $[a,\ b]$, and consider the planar lamina of uniform density $\rho$ bounded by the graphs of $y\ =\ f(x)$, $y\ =\ g(x)$, and $a\ \leq\ x\ \leq\ b$.
+
+\hspace{0.2in} \textbf{1.} The \textbf{moments about the x- and y-axes} are:
+
+\hspace{0.3in} $M_{x}\ =\ \rho\displaystyle\int^{b}_{a}\left[\dfrac{f(x)\ +\ g(x)}{2}\right][f(x)\ -\ g(x)]dx$
+
+\hspace{0.3in} $M_{y}\ =\ \rho\displaystyle\int^{b}_{a}x[f(x)\ -\ g(x)]dx$
+
+\hspace{0.2in} \textbf{2.} The \textbf{center of mass} $(\bar{x},\ \bar{y})$ is given by $\bar{x}\ =\ \dfrac{M_{y}}{m}$ and $\bar{y}\ =\ \dfrac{M_{x}}{m}$, where $m\ =\ \rho\displaystyle\int^{b}_{a}[f(x)\ -\ g(x)]dx$ is the mass of the lamina.
+
+\vspace{0.8in}
+\textbf{Definition of Force Exterted by a Fluid}
+
+\hspace{0.1in} The \textbf{force $F$ exerted by a fluid} of constant weight-density $w$ (per unit of volume) against a submerged vertical plane region from $y\ =\ c$ to $y\ =\ d$ is:
+
+\hspace{1.5in} $F\ =\ w\displaystyle\lim_{\|\Delta\|\rightarrow 0\|}\ \displaystyle\sum^{n}_{i=1}h(y_{i})L(y_{i})\Delta y\ =\ w\displaystyle\int^{d}_{c}h(y)L(y)dy$
+
+\hspace{0.1in} where $h(y)$ is the depth of the fluid at $y$ and $L(y)$ is the horizontal length of the region at $y$.
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 7 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Integration by Parts}
+
+\hspace{0.1in} If $u$ and $v$ are functions of $x$ and have continuous derivatives, then:
+
+\hspace{1.5in} $\displaystyle\int u dv\ =\ uv\ -\ \displaystyle\int v du$
+
+\textbf{Integrals Involving Sine-Cosine Products with Different Angles}
+
+\hspace{0.1in} Integrals involving the products of sines and cosines of two \textit{different} angles occur in many applications.  In such instances, you can use the following product-to-sum identities:
+
+\hspace{1.0in} $\sin (mx)\sin (nx)\ =\ \dfrac{1}{2}(\cos [(m\ -\ n)x]\ -\ \cos [(m\ +\ n)x])$
+
+\hspace{1.0in} $\sin (mx)\cos (nx)\ =\ \dfrac{1}{2}(\sin [(m\ -\ n)x]\ +\ \sin [(m\ +\ n)x])$
+
+\hspace{1.0in} $\cos (mx)\cos (nx)\ =\ \dfrac{1}{2}(\cos [(m\ -\ n)x]\ +\ \cos [(m\ +\ n)x])$
+
+\vspace{0.5in}
+\textbf{Special Integration Formulas $(a\ >\ 0)$}
+
+\hspace{0.1in} \textbf{1.} $\displaystyle\int\sqrt{a^{2}\ -\ u^{2}}du\ =\ \dfrac{1}{2}\left(a^{2}\text{arcsin}\dfrac{u}{a}\ +\ u\sqrt{a^{2}\ -\ u^{2}}\right)\ +\ C$
+
+\hspace{0.1in} \textbf{2.} $\displaystyle\int\sqrt{u^{2}\ -\ a^{2}}du\ =\ \dfrac{1}{2}\left(u\sqrt{u^{2}\ -\ a^{2}}\ -\ a^{2}\text{ln}|u\ +\ \sqrt{u^{2}\ -\ a^{2}}|\right)\ +\ C,\ u\ >\ a$
+
+\hspace{0.1in} \textbf{3.} $\displaystyle\int\sqrt{u^{2}\ +\ a^{2}}du\ =\ \dfrac{1}{2}\left(u\sqrt{u^{2}\ +\ a^{2}}\ -\ a^{2}\text{ln}|u\ +\ \sqrt{u^{2}\ +\ a^{2}}|\right)\ +\ C,\ u\ >\ a$
+
+\vspace{0.4in}
+\textbf{Decomposition of $N(x)/D(x)$ into Partial Fractions}
+
+\hspace{0.1in} \textbf{1. Linear factors:} For each factor of the form $(px\ +\ q)^{m}$, the partial fraction decomposition must include the following sum of $m$ fractions.
+
+\hspace{0.2in} $\dfrac{A_{1}}{(px\ +\ q)}\ +\ \dfrac{A_{2}}{(px\ +\ q)^{2}}\ +\ \cdots\ +\ \dfrac{A_{m}}{(px\ +\ q)^{m}}$
+
+\hspace{0.1in} \textbf{2. Quadratic factors:} For each factor of the form $(ax^{2}\ +\ bx\ +\ c)^{n}$, the partial fraction decomposition must include the following sum of $n$ fractions.
+
+\hspace{0.2in} $\dfrac{B_{1}x\ +\ C_{1}}{ax^{2}\ +\ bx\ +\ c}\ +\ \dfrac{B_{2}x\ +\ C_{2}}{(ax^{2}\ +\ bx\ +\ c)^{2}}\ +\ \cdots\ +\ \dfrac{B_{n}x\ +\ C_{n}}{(ax^{2}\ +\ bx\ +\ c)^{n}}$
+
+\textbf{The Trapezoidal Rule}
+
+\hspace{0.1in} Let $f$ be continuous on $[a,\ b]$.  The Trapezoidal Rule for approximating $\displaystyle\int^{b}_{a}f(x)dx$ is:
+
+\hspace{0.2in} $\displaystyle\int^{b}_{a}f(x)dx\ \approx\ \dfrac{b\ -\ a}{2n}[f(x_{0})\ +\ 2f(x_{1})\ +\ 2f(x_{2})\ +\ \cdots\ +\ 2f(x_{n-1})\ +\ f(x_{n})]$
+
+\hspace{0.1in} Moreover, as $n\ \rightarrow\ \infty$, the right-hand side approaches $\displaystyle\int^{b}_{a}f(x)dx$
+
+\vspace{0.5in}
+\textbf{Simpson's Rule}
+
+\hspace{0.1in} Let $f$ be continuous on $[a,\ b]$ and let $n$ be an even integer.  Simpson's Rule for approximating $\displaystyle\int^{b}_{a}f(x)dx$ is:
+
+\hspace{0.2in} $\int^{b}_{a}f(x)dx\ \approx\ \dfrac{b\ -\ a}{3n}[f(x_{0})\ +\ 4f(x_{1})\ +\ 2f(x_{2})\ +\ 4f(x_{3})\ +\ \cdots\ 4f(x_{n-1})\ +\ f(x_{n})]$
+
+\hspace{0.1in} Moreover, as $n\ \rightarrow\ \infty$, the right-hand side approaches $\displaystyle\int^{b}_{a}f(x)dx$
+
+\textbf{Error in Trapezoidal and Simpson's Rules}
+
+\hspace{0.2in} $|E|\ \leq\ \dfrac{(b\ -\ a)^{3}}{12n^{2}}[\text{max}|f''(x)|],\ a\ \leq\ x\ \leq\ b$ for Trapezoidal Rule.
+
+\hspace{0.1in} Moreover, if $f$ has a continuous fourth derivative on $[a,\ b]$, then the error $E$ in approximating $\displaystyle\int^{b}_{a}f(x)dx$ by Simpson's Rule is:
+
+\hspace{0.2in} $|E|\ \leq\ \dfrac{(b\ -\ a)^{5}}{180n^{4}}[\text{max}|f^{(4)}(x)|],\ a\ \leq\ x\ \leq\ b$ for Simpson's Rule.
+
+\newpage
+
+\underline{\textbf{\huge Chapter 10 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Standard Equation of a Parabola}
+
+\hspace{0.1in}  The \textbf{standard form} of the equation of a parabola with vertex $(h,\ k)$ and directrix $y\ =\ k\ -\ p$ is:
+
+\vspace{-0.4in}
+\hspace{2.0in} $(x\ -\ h)^{2}\ =\ 4p(y\ -\ k)$, \begin{Large} vertical axis \end{Large}
+
+\hspace{0.1in} For directrix $x\ =\ h\ -\ p$ the equation is:
+
+\hspace{2.0in} $(y\ -\ k)^{2}\ =\ 4p(x\ -\ h)$, \begin{Large} horizontal axis \end{Large}
+
+\hspace{0.1in} The focus lies on the axis $p$ units (directed distance) from the vertex.  The coordinates of the focus are as follows:
+
+\hspace{2.5in} $(h,\ k+p)$, \begin{Large} vertical axis \end{Large} 
+
+\hspace{0.1in} and
+
+\vspace{-0.3in}
+\hspace{2.5in} $(h+p,\ k)$, \begin{Large} horizontal axis \end{Large}
+
+\textbf{Standard Equation of an Ellipse}
+
+\hspace{0.1in} The standard form of the equation of an ellipse with center $(h,\ k)$ and major and minor axes of lengths $2a$ and $2b$, where $a\ >\ b$, is:
+
+\hspace{2.0in} $\dfrac{(x\ -\ h)^{2}}{a^{2}}\ +\ \dfrac{(y\ -\ k)^{2}}{b^{2}}\ =\ 1$, \begin{Large} major axis is horizontal \end{Large}
+
+\hspace{0.1in} or:
+
+\hspace{2.0in} $\dfrac{(x\ -\ h)^{2}}{b^{2}}\ +\ \dfrac{(y\ -\ k)^{2}}{a^{2}}\ =\ 1$, \begin{Large} major axis is vertical \end{Large}
+
+\hspace{0.1in} with $c^{2}\ =\ a^{2}\ -\ b^{2}$
+
+\vspace{0.1in}
+\textbf{Definition of Eccentricity of an Ellipse}
+
+\hspace{0.1in} The \textbf{eccentricity} $e$ of an ellipse is given by the ratio:
+
+\hspace{1.5in} $e\ =\ \dfrac{c}{a}$
+
+\textbf{Standard Equation of a Hyperbola}
+
+\hspace{0.1in} The standard form of the equation of a hyperbola with center at $(h,\ k)$ is:
+
+\hspace{1.0in} $\dfrac{(x\ -\ h)^{2}}{a^{2}}\ -\ \dfrac{(y\ -\ k)^{2}}{b^{2}}\ =\ 1$, \begin{Large} transverse axis is horizontal \end{Large}
+
+\hspace{0.1in} or:
+
+\hspace{1.0in} $\dfrac{(y\ -\ k)^{2}}{a^{2}}\ -\ \dfrac{(x\ -\ h)^{2}}{b^{2}}\ =\ 1$, \begin{Large} transverse axis is vertical \end{Large}
+
+\hspace{0.1in} where $c^{2}\ =\ a^{2}\ +\ b^{2}$
+
+\textbf{Parametric Form of the Derivative}
+
+\hspace{0.1in} If a smooth curve $C$ is given by the equations:
+
+\hspace{1.0in} $x\ =\ f(t)$\ and\ $y\ =\ g(t)$
+
+\hspace{0.1in} then the slope of $C$ at $(x,\ y)$ is:
+
+\hspace{0.5in} $\dfrac{dy}{dx}\ =\ \dfrac{dy/dt}{dx/dt},\ \dfrac{dx}{dt}\ \neq\ 0$
+
+\vspace{1.8in}
+\textbf{Arc Length in Parametric Form}
+
+\hspace{0.1in} If a smooth curve $C$ is given by $x\ =\ f(t)$ and $y\ =\ g(t)$ such that $C$ does not intersect itself on the interval $a\ \leq\ t\ \leq\ b$ (except possibly at the endpoints), then the arc length of $C$ over the interval is given by:
+
+\hspace{1.0in} $s\ =\ \displaystyle\int^{b}_{a}\sqrt{\left(\dfrac{dx}{dt}\right)^{2}\ +\ \left(\dfrac{dy}{dt}\right)^{2}}dt\ =\ \displaystyle\int^{b}_{a}\sqrt{[f'(t)]^{2}\ +\ [g'(t)]^{2}}dt$
+
+\textbf{Area of a Surface of Revolution}
+
+\hspace{0.1in} If a smooth curve $C$ given by $x\ =\ f(t)$ and $y\ =\ g(t)$ does not cross itself on an interval $a\ \leq\ t\ \leq\ b$, then the area $S$ of the surface of revolution formed by revolving $C$ about the coordinate axes is given by the following:
+
+\hspace{0.2in} \textbf{1.}\ $S\ =\ 2\pi\displaystyle\int^{b}_{a}g(t)\sqrt{\left(\dfrac{dx}{dt}\right)^{2}\ +\ \left(\dfrac{dy}{dt}\right)^{2}}dt$, \begin{Large} revolution about x-axis \end{Large}
+
+\hspace{0.2in} \textbf{2.}\ $S\ =\ 2\pi\displaystyle\int^{b}_{a}f(t)\sqrt{\left(\dfrac{dx}{dt}\right)^{2}\ +\ \left(\dfrac{dy}{dt}\right)^{2}}dt$, \begin{Large} revolution about y-axis \end{Large}
+
+\textbf{Coordinate Conversion}
+
+\hspace{0.1in} The polar coordinates $(r,\ \theta)$ of a point are related to the rectangular coordinates $(x,\ y)$ of the point as follows.
+
+\hspace{0.2in} \textbf{Polar-to-Rectangular:}\ \ $x\ =\ r\cdot\cos \theta$ and $y\ =\ r\cdot\sin \theta$
+
+\hspace{0.2in} \textbf{Rectangular-to-Polar:}\ \ $\tan \theta\ =\ \dfrac{y}{x}$ and $r^{2}\ =\ x^{2}\ + y^{2}$
+
+\vspace{1.5in}
+\textbf{Polar Equations of Conics}
+
+\hspace{0.1in} The graph of a polar equation of the form:
+
+\hspace{1.5in} $r\ =\ \dfrac{ed}{1\ \pm\ e\cdot\cos \theta}$ or $r\ =\ \dfrac{ed}{1\ \pm\ e\cdot\sin \theta}$
+
+\hspace{0.1in} is a conic, where $e\ >\ 0$ is the eccentricity and $|d|$ is the distance between the focus at the pole and its corresponding directrix.
+
+\textbf{Slope in Polar Form}
+
+\hspace{0.1in} If $f$ is a differentiable function of $\theta$, then the \textit{slope} of the tangent line to the graph of $r\ =\ f(\theta)$ at the point $(r,\ \theta)$ is:
+
+\hspace{1.5in} $\dfrac{dy}{dx}\ =\ \dfrac{dy/d\theta}{dx/d\theta}\ =\ \dfrac{f(\theta)\cos \theta\ +\ f'(\theta)\sin \theta}{-f(\theta)\sin \theta\ +\ f'(\theta)\cos \theta}$
+
+\hspace{0.1in} provided that $dx/d\theta\ \neq\ 0$ at $(r,\ \theta)$.
+
+\textbf{Area in Polar Coordinates}
+
+\hspace{0.1in} If $f$ is continuous and nonnegative on the interval $[\alpha, \beta]$, $0\ <\ \beta\ -\ \alpha\ \leq\ 2\pi$, then the area of the region bounded by the graph of $r\ =\ f(\theta)$ between the radial lines $\theta\ =\ \alpha$ and $\theta\ =\ \beta$ is:
+
+\hspace{1.5in} $A\ =\ \dfrac{1}{2}\displaystyle\int^{\beta}_{\alpha}[f(\theta)]^{2}d\theta\ =\ \dfrac{1}{2}\displaystyle\int^{\beta}_{\alpha}r^{2}d\theta$, \begin{Large} $0\ <\ \beta\ -\ \alpha\ \leq\ 2\pi$ \end{Large}
+
+\textbf{Arc Length of a Polar Curve}
+
+\hspace{0.1in} Let $f$ be a function whose derivative is continuous on an interval $\alpha\ \leq\ \theta\ \leq\ \beta$. The length of the graph of $r\ =\ f(\theta)$ from $\theta\ =\ \alpha$ to $\theta\ =\ \beta$ is:
+
+\hspace{1.5in} $s\ =\ \displaystyle\int^{\beta}_{\alpha}\sqrt{[f(\theta)]^{2}\ +\ [f'(\theta)]^{2}}d\theta\ =\ \displaystyle\int^{\beta}_{\alpha}\sqrt{r^{2}\ +\ \left(\dfrac{dr}{d\theta}\right)^{2}}d\theta$
+
+\textbf{Area of a Surface of Revolution}
+
+\hspace{0.1in} Let $f$ be a function whose derivative is continuous on an interval $\alpha\ \leq\ \theta\ \leq\ \beta$. The area of the surface formed by revolving the graph $r\ =\ f(\theta)$ from $\theta\ =\ \alpha$ to $\theta\ =\ \beta$ about the indicated line is as follows:
+
+\hspace{0.2in} \textbf{1.}\ $S\ =\ 2\pi\displaystyle\int^{\beta}_{\alpha}f(\theta)\sin (\theta)\cdot\sqrt{[f(\theta)]^{2}\ +\ [f'(\theta)]^{2}}d\theta$, \begin{Large} about the polar axis \end{Large}
+
+\hspace{0.2in} \textbf{2.}\ $S\ =\ 2\pi\displaystyle\int^{\beta}_{\alpha}f(\theta)\cos (\theta)\cdot\sqrt{[f(\theta)]^{2}\ +\ [f'(\theta)]^{2}}d\theta$, \begin{Large} about the line $\theta\ =\ \dfrac{\pi}{2}$ \end{Large} 
+
+\textbf{Classification of Conics by Eccentricity}
+
+\hspace{0.1in} Let $f$ be a fixed point (\textit{focus}) and let $D$ be a fixed line (\textit{directrix}) in the plane.  Let $P$ be another point in the plane and let $e$ (\textit{eccentricity}) be the ratio of the distance between $P$ and $F$ to the distance between $P$ and $D$. The collection of all points $P$ with a given eccentricity is a conic:
+
+\hspace{0.2in} \textbf{1.}\ The conic is an ellipse for $0\ <\ e\ <\ 1$.
+
+\hspace{0.2in} \textbf{2.}\ The conic is a parabola for $e\ =\ 1$.
+
+\hspace{0.2in} \textbf{3.}\ The conic is a hyperbola for $e\ >\ 1$.
+
+\textbf{Classification of Conics in Algebraic Form}
+
+When a conic is in the form $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$, the determinant of the equation shows:
+{\large
+
+\textbf{1.} If $B^2-4AC>0$, the conic is a hyperbola
+
+\textbf{2.} If $B^2-4AC<0$, the conic is an ellipse or circle.
+
+\textbf{3.} If $B^2-4AC=0$, the conic is a hyperbola} 
+
+\vspace{0.25in}
+
+\newpage
+
+%PUT IN THE SERIES TEST TABLE HERE!!!
+\includepdf[pages=-]{CalculusSeriesPage-Rotated.pdf}
+
+\newpage
+
+\underline{\textbf{\huge Chapter 11 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\vspace{0.2in}
+
+\textbf{Alternating Series Remainder}
+
+\hspace{0.1in} If a convergent alternating series satisfies the condition $a_{n+1}\ \leq\ a_{n}$, then the absolute value of the remainder $R_{N}$ involved in approximating the sum $S$ by $S_{N}$ is less than (or equal to) the first neglected term.  That is,
+
+\hspace{2.5in} $|S\ -\ S_{N}|\ =\ |R_{N}|\ \leq\ a_{N+1}$
+
+\textbf{Definition of Taylor and Maclaurin Series}
+
+\hspace{0.1in} If a function $f$ has derivatives of all orders at $x\ =\ c$, then the series:
+
+\hspace{0.2in} $\displaystyle\sum^{\infty}_{n=0}\dfrac{f^{(n)}(c)}{n!}(x\ -\ c)^{n}\ =\ f(c)\ +\ f'(c)(x\ -\ c)\ +\ \cdots\ +\ \dfrac{f^{(n)}(c)}{n!}(x\ -\ c)^{n}\ +\ \cdots$
+
+\hspace{0.1in} is called the \textbf{Taylor series for \textit{f(x)} at \textit{c}}.  Moreover, if $c\ =\ 0$, then the series is the \textbf{Maclaurin series for \textit{f}}.
+
+\textbf{Taylor's Theorem}
+
+\hspace{0.1in} If a function $f$ is differentiable through order $n\ +\ 1$ in an interval $I$ containing $c$, then, for each $x$ in $I$, there exists $z$ between $x$ and $c$ such that:
+
+\hspace{0.2in} $f(x)\ =\ f(c)\ +\ f'(c)(x\ -\ c)\ +\ \dfrac{f''(c)}{2!}(x\ -\ c)^{2}\ +\ \cdots\ +\ \dfrac{f^{(n)}(c)}{n!}(x\ -\ c)^{n}\ +\ R_{n}(x)$
+
+\hspace{0.1in} where:
+
+\hspace{2.5in} $R_{n}(x)\ =\ \dfrac{f^{(n+1)}(z)}{(n+1)!}(x\ -\ c)^{n+1}$
+
+\vspace{0.5in}
+\textbf{Power Series for Elementary Functions}
+
+\begin{large}
+
+$\dfrac{1}{x}\ =\ 1-(x-1)+(x-1)^{2}-(x-1)^{3}+(x-1)^{4}-\ \cdots\ +(-1)^{n}(x-1)^{n}+\ \cdots$,\ \ Converges:\ $0<x<2$
+
+$\dfrac{1}{1+x}\ =\ 1-x+x^{2}-x^{3}+x^{4}-x^{5}+\ \cdots\ +(-1)^{n}x^{n}+\ \cdots$,\ \ Converges:\ $-1<x<1$
+
+$\ln x\ =\ (x-1)-\dfrac{(x-1)^{2}}{2}+\dfrac{(x-1)^{3}}{3}-\dfrac{(x-1)^{4}}{4}+\ \cdots\ +\dfrac{(-1)^{n-1}(x-1)^{n}}{n}+\ \cdots$,\ \ Converges:\ $0<x\leq 2$
+
+$e^{x}\ =\ 1+x+\dfrac{x^{2}}{2!}+\dfrac{x^{3}}{3!}+\dfrac{x^{4}}{4!}+\dfrac{x^{5}}{5!}+\ \cdots\ +\dfrac{x^{n}}{n!}+\ \cdots$,\ \ Converges:\ $-\infty<x<\infty$
+
+$\sin x\ =\ x-\dfrac{x^{3}}{3!}+\dfrac{x^{5}}{5!}-\dfrac{x^{7}}{7!}+\dfrac{x^{9}}{9!}-\ \cdots\ +\dfrac{(-1)^{n}x^{2n+1}}{(2n+1)!}+\ \cdots$,\ \ Converges:\ $-\infty<x<\infty$
+
+$\cos x\ =\ 1-\dfrac{x^{2}}{2!}+\dfrac{x^{4}}{4!}-\dfrac{x^{6}}{6!}+\dfrac{x^{8}}{8!}-\ \cdots\ +\dfrac{(-1)^{n}x^{2n}}{(2n)!}+\ \cdots$,\ \ Converges:\ $-\infty<x<\infty$
+
+$\arctan x\ =\ x-\dfrac{x^{3}}{3}+\dfrac{x^{5}}{5}-\dfrac{x^{7}}{7}+\dfrac{x^{9}}{9}-\ \cdots\ +\dfrac{(-1)^{n}x^{2n+1}}{2n+1}+\ \cdots$,\ \ Converges:\ $-1\leq x\leq 1$
+
+$\arcsin x\ =\ x+\dfrac{x^{3}}{2\cdot 3}+\dfrac{1\cdot 3x^{5}}{2\cdot 4\cdot 5}+\dfrac{1\cdot 3\cdot 5x^{7}}{2\cdot 4\cdot 6\cdot 7}+\ \cdots\ +\dfrac{(2n)!x^{2n+1}}{(2^{n}n!)^{2}(2n+1)}+\ \cdots$,\ \ Converges:\ $-1\leq x\leq 1$
+
+$(1+x)^{k}\ =\ 1+kx+\dfrac{k(k-1)x^{2}}{2!}+\dfrac{k(k-1)(k-2)x^{3}}{3!}+\dfrac{k(k-1)(k-2)(k-3)x^{4}}{4!}+\ \cdots$,\ \ Converges:\ $-1<x<1^{*}$, \hspace{1.5in} * Could also converge at $x=\pm 1$ depending on $k$.
+
+\vspace{0.1in}
+\textbf{Function Comparisons as Limit goes to Infinity}
+
+\hspace{0.5in}$\ln(n) \ll \sqrt[p]{n} \ll n \ll n^p \ll b^n \ll n! \ll n^n$
+
+\end{large}
+
+\vspace{2.5in}
+
+\underline{\textbf{\huge Chapter 12 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Angle Between Two Vectors}
+
+\hspace{0.1in} If $\theta$ is the angle between two nonzero vectors \textbf{u} and \textbf{v}, where $0\ \leq\ \theta\ \leq\ \pi$, then:
+
+\hspace{2.5in} $\cos \theta\ =\ \dfrac{\textbf{u}\ \cdot\ \textbf{v}}{\|\textbf{u}\|\ \|\textbf{v}\|}$
+
+\textbf{Projection Using the Dot Product}
+
+\hspace{0.1in} If \textbf{u} and \textbf{v} are nonzero vectors, then the projection of \textbf{u} onto \textbf{v} is:
+
+\hspace{2.0in} $\text{proj}_{\textbf{v}}\textbf{u}\ =\ \left(\dfrac{\textbf{u}\ \cdot\ \textbf{v}}{\|\textbf{v}\|^{2}}\right)\textbf{v}$
+
+\textbf{Definition of Cross Product of Two Vectors in Space}
+
+\hspace{0.1in} Let:
+
+\hspace{0.2in} $\textbf{u}\ =\ u_{1}\textbf{i}\ +\ u_{2}\textbf{j}\ +\ u_{3}\textbf{k}$ and $\textbf{v}\ =\ v_{1}\textbf{i}\ +\ v_{2}\textbf{j}\ +\ v_{3}\textbf{k}$
+
+\hspace{0.1in} be vectors in space. The \textbf{cross product} of \textbf{u} and \textbf{v} is the vector:
+
+\hspace{0.2in} $\textbf{u}\ \times\ \textbf{v}\ =\ (u_{2}v_{3}\ -\ u_{3}v_{2})\textbf{i}\ -\ (u_{1}v_{3}\ -\ u_{3}v_{1})\textbf{j}\ +\ (u_{1}v_{2}\ -\ u_{2}v_{1})\textbf{k}$
+
+\textbf{Geometric Property of the Triple Scalar Product}
+
+\hspace{0.1in} The volume $V$ of the parallelpiped with vectors \textbf{u}, \textbf{v}, and \textbf{w} as adjacent edges is:
+
+\hspace{2.5in} $V\ =\ |\textbf{u}\ \cdot\ (\textbf{v}\ \times\ \textbf{w})|$
+
+\vspace{1.2in}
+\textbf{Standard Equation of a Plane in Space}
+
+\hspace{0.1in} The plane containing the point $(x_{1},\ y_{1},\ z_{1})$ and having normal vector:
+
+\hspace{2.5in} $\textbf{n}\ =\ \langle a,\ b,\ c\rangle$
+
+\hspace{0.1in} can be represented by the \textbf{standard form} of the equation of a plane:
+
+\hspace{1.0in} $a(x\ -\ x_{1})\ +\ b(y\ -\ y_{1})\ +\ c(z\ -\ z_{1})\ =\ 0$.
+
+\textbf{Surface of Revolution}
+
+\hspace{0.2in}If the graph of a radius function r is revolving about one of the coordinates axes, then the equation of the resulting surface of revolution has one of the forms listed below.
+
+1. Revolved about the x-axis: $y^2+z^2=[r(x)]^2$
+
+2. Revolved about the y-axis: $x^2+z^2=[r(y)]^2$
+
+3. Revolved about the z-axis: $x^2+y^2=[r(z)]^2$
+
+\newpage
+
+%PUT IN 3D CONICS PAGES HERE!!!
+\includepdf[pages=-]{CalculusConicsPage1-Rotated.pdf}
+
+\includepdf[pages=-]{CalculusConicsPage2-Rotated.pdf}
+
+\includepdf[pages=-]{CalculusConicsPage3-Rotated.pdf}
+\newpage
+
+\textbf{Distance Between a Point and a Plane}
+
+\hspace{0.1in} The distance between a plane and a point $Q$ (not in the plane) is:
+
+\hspace{1.5in} $D\ =\ \|\text{proj}_{\textbf{n}}\overrightarrow{PQ}\|\ =\ \dfrac{|\overrightarrow{PQ}\ \cdot\ \textbf{n}|}{\|\textbf{n}\|}$
+
+\hspace{0.1in} where $P$ is a point in the plane and $n$ is normal to the plane.
+
+\textbf{Distance Between a Point and a Line in Space}
+
+\hspace{0.1in} The distance between a point $Q$ and a line in space is:
+
+\hspace{1.5in} $D\ =\ \dfrac{\|\overrightarrow{PQ}\ \times\ \textbf{u}\|}{\|\textbf{u}\|}$
+
+\hspace{0.1in} where \textbf{u} is a direction vector for the line and $P$ is a point on the line.
+
+\textbf{The Cylindrical Coordinate System}
+
+\hspace{0.1in} In a \textbf{cylindrical coordinate system}, a point $P$ in space is represented by an ordered triple $(r,\ \theta,\ z)$:
+
+\hspace{0.2in} \textbf{1.}\ $(r,\ \theta)$ is a polar representation of the projection of $P$ in the $xy$-plane.
+
+\hspace{0.2in} \textbf{2.}\ $z$ is the directed distance from $(r,\ theta)$ to $P$.
+
+\hspace{0.1in} To convert from rectangular to cylindrical coordinates (or vice versa), use the conversion guidelines for polar coordinates listed below:
+
+\hspace{0.2in} \textbf{Cylindrical-to-Rectangular}\ \ $x\ =\ r\cos \theta,\ y\ =\ r\sin \theta,\ z\ =\ z$
+
+\hspace{0.2in} \textbf{Rectangular-to-Cylindrical}\ \ $r^{2}\ =\ x^{2}\ +\ y^{2},\ \tan \theta\ =\ \dfrac{y}{x},\ z\ =\ z$
+
+\vspace{1.8in}
+\textbf{The Spherical Coordinate System}
+
+\hspace{0.1in} In a \textbf{spherical coodinate system}, a point $P$ in space is represented by an ordered triple $(\rho,\ \theta\,\ \phi)$, where $\rho$ is the lowercase Greek letter \textit{rho} and $\phi$ is the lowercase Greek letter \textit{phi}.
+
+\hspace{0.2in} \textbf{1.}\ $\rho$ is the distance between $P$ and the origin, $\rho\ \geq\ 0$
+
+\hspace{0.2in} \textbf{2.}\ $\theta$ is the same angle used in cylindrical coordinates for $r\ \geq\ 0$
+
+\hspace{0.2in} \textbf{3.}\ $\phi$ is the angle \textit{between} the positive $z$-axis and the line segment $\overrightarrow{OP}$, $0\ \leq\ \phi\ \leq\ \pi$
+
+\hspace{0.1in} Note that the first and third coordinates, $\rho$ and $\phi$ are nonnegative.
+
+\textbf{Spherical-to-Rectangular}
+
+\hspace{1.5in} $x\ =\ \rho\sin \phi\cos \theta,\ y\ =\ \rho\sin \phi\sin \theta,\ z\ =\ \rho\cos \phi$
+
+\hspace{0.1in} To convert from one system to the other, use the conversion guidelines listed below.
+
+\textbf{Rectangular-to-Spherical}
+
+\hspace{1.0in} $\rho^{2}\ =\ x^{2}\ +\ y^{2}\ +\ z^{2},\ \tan \theta\ =\ \dfrac{y}{x},\ \phi\ =\ \text{arccos}\left(\dfrac{z}{\sqrt{x^{2}\ +\ y^{2}\ +\ z^{2}}}\right)$
+
+\hspace{0.1in} To change coordinates between cylindrical and spherical systems, use the conversion guidelines listed below.
+
+\textbf{Spherical-to-Cylindrical ($r\ \geq\ 0$)}
+
+\hspace{1.0in} $r^{2}\ =\ \rho^{2}\sin ^{2}\phi,\ \theta\ =\ \theta,\ z\ =\ \rho\cos \phi$
+
+\textbf{Cylindrical-to-Spherical ($r\ \geq\ 0$)}
+
+\hspace{1.0in} $\rho\ =\ \sqrt{r^{2}\ +\ z^{2}},\ \theta\ =\ \theta,\ \phi\ =\ \text{arccos}\left(\dfrac{z}{\sqrt{r^{2}\ +\ z^{2}}}\right)$
+
+\underline{\textbf{\huge Chapter 13 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\vspace{-0.1in}
+\textbf{Arc Length of a Space Curve}
+
+\hspace{0.1in} If $C$ is a smooth curve given by $\textbf{r}(t)\ =\ x(t)\textbf{i}\ +\ y(t)\textbf{j}\ +\ z(t)\textbf{k}$ on an interval $[a,\ b]$, then the arc length of $C$ on the interval is:
+
+\hspace{1.0in} $s\ =\ \displaystyle\int^{b}_{a}\sqrt{[x'(t)]^{2}\ +\ [y'(t)]^{2}\ +\ [z'(t)]^{2}}dt\ =\ \displaystyle\int^{b}_{a}\|\textbf{r}'(t)\|dt$
+
+\textbf{Summary of Velocity, Acceleration, and Curvature}
+
+\hspace{0.1in} Unless noted otherwise, let $C$ be a curve (in the plane or in space) given by the position vector:
+
+\vspace{-0.2in}
+\hspace{2.0in} $\textbf{r}(t)\ =\ x(t)\textbf{i}\ +\ y(t)\textbf{j}$, \begin{Large} Curve in the plane \end{Large}
+
+
+\hspace{2.0in} $\textbf{r}(t)\ =\ x(t)\textbf{i}\ +\ y(t)\textbf{j}\ +\ z(t)\textbf{k}$, \begin{large} Curve in space \end{large}
+
+\hspace{0.1in} where $x$, $y$, and $z$ are twice-differentiable functions of $t$.
+
+\hspace{0.1in} \textbf{Velocity vector, speed, and acceleration vector}
+
+\hspace{1.0in} $\textbf{v}(t)\ =\ \textbf{r}'(t)$, \begin{Large} velocity vector \end{Large}
+
+\hspace{1.0in} $\|\textbf{v}(t)\|\ =\ \dfrac{ds}{dt}\ =\ \|\textbf{r}'(t)\|$, \begin{Large} speed \end{Large}
+
+\hspace{1.0in} $\textbf{a}(t)\ =\ \textbf{r}''(t)$, \begin{Large} acceleration vector \end{Large}
+
+\hspace{0.2in} $\textbf{a}(t)\ =\ a_{\textbf{T}}\textbf{T}(t)\ +\ a_{\textbf{N}}\textbf{N}(t)\ =\ \dfrac{d^{2}s}{dt^{2}}\textbf{T}(t)\ +\ K\left(\dfrac{ds}{dt}\right)^{2}\textbf{N}(t)$, \begin{Large} $K$ is curvature and $\dfrac{ds}{dt}$ is speed \end{Large}
+
+\hspace{0.1in} \textbf{Unit tangent vector and principle unit normal vector}
+
+\hspace{1.5in} $\textbf{T}(t)\ =\ \dfrac{\textbf{r}'(t)}{\|\textbf{r}'(t)\|}$, \begin{Large} Unit tangent vector \end{Large}
+
+\hspace{1.5in} $\textbf{N}(t)\ =\ \dfrac{\textbf{T}'(t)}{\|\textbf{T}'(t)\|}$, \begin{Large} Principle unit normal vector \end{Large}
+
+\hspace{0.1in} \textbf{Components of acceleration}
+
+\hspace{0.2in} $a_{\textbf{T}}\ =\ \textbf{a}\ \cdot\ \textbf{T}\ =\ \dfrac{\textbf{v}\ \cdot\ \textbf{a}}{\|\textbf{v}\|}\ =\ \dfrac{d^{2}s}{dt^{2}}$, \begin{Large} Tangential component of acceleration \end{Large}
+
+\hspace{0.2in} $a_{\textbf{N}}\ =\ \textbf{a}\ \cdot\ \textbf{N}\ =\ \dfrac{\|\textbf{v}\ \times\ \textbf{a}\|}{\|\textbf{v}\|}\ =\ \sqrt{\|\textbf{a}\|^{2}\ -\ a_{\textbf{T}}^{2}}$, \begin{large} Normal component of acceleration \end{large}
+
+\hspace{0.2in} $a_{\textbf{N}}\ =\ K\left(\dfrac{ds}{dt}\right)^{2}$, \begin{Large} $K$ is curvature and $\dfrac{ds}{dt}$ is speed \end{Large}
+
+\hspace{0.1in} \textbf{Formulas for curvature in the plane}
+
+\hspace{0.5in} $K\ =\ \dfrac{|y''|}{[1\ +\ (y')^{2}]^{3/2}}$, \begin{Large} $C$ given by $y\ =\ f(x)$ \end{Large}
+
+\hspace{0.5in} $K\ =\ \dfrac{|x'y''\ -\ y'x''|}{[(x')^{2}\ +\ (y')^{2}]^{3/2}}$, \begin{Large} $C$ given by $x\ =\ x(t),\ y\ =\ y(t)$ \end{Large}
+
+\hspace{0.1in} \textbf{Formulas for curvature in the plane or in space}
+
+\hspace{0.5in} $K\ =\ \|\textbf{T}'(s)\|\ =\ \|\textbf{r}''(s)\|$, \begin{Large} $s$ is arc length parameter \end{Large}
+
+\hspace{0.5in} $K\ =\ \dfrac{\|\textbf{T}'(t)\|}{\|\textbf{r}'(t)\|}\ =\ \dfrac{\|\textbf{r}'(t)\ \times\ \textbf{r}''(t)\|}{\|\textbf{r}'(t)\|^{3}}$, \begin{Large} $t$ is general parameter \end{Large}
+
+\hspace{0.5in} $K\ =\ \dfrac{\textbf{a}(t)\ \cdot\ \textbf{N}(t)}{\|\textbf{v}(t)\|^{2}}$
+
+\hspace{0.1in} Cross product formulas apply only to curves in space.
+
+\vspace{1.0in}
+\textbf{Alternative Formula for Principle Unit Normal Vector}
+
+\hspace{1.0in} $\textbf{N}\ =\ \dfrac{(\textbf{v}\cdot\textbf{v})\textbf{a}\ -\ (\textbf{v}\cdot\textbf{a})\textbf{v}}{\|(\textbf{v}\cdot\textbf{v})\textbf{a}\ -\ (\textbf{v}\cdot\textbf{a})\textbf{v}\|}$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 14 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Increments and Differentials}
+
+\hspace{0.1in} In this section, the concepts of increments and differentials are generalized functions of two or more variables.  Recall that for $y\ =\ f(x)$, the differential of $y$ was defined as:
+
+\vspace{-0.2in}
+\hspace{2.5in} $dy\ =\ f'(x)dx$
+
+\hspace{0.1in} Similar terminology is used for a function of two variables, $z\ =\ f(x,\ y)$.  That is, $\Delta x$ and $\Delta y$ are the \textbf{increments of \textit{x} and \textit{y}}, and the \textbf{increment of \textit{z}} is:
+
+\hspace{1.5in} $\Delta z\ =\ f(x\ +\ \Delta x,\ y\ +\ \Delta y)\ -\ f(x,\ y)$
+
+\textbf{Definition of Total Differential}
+
+\hspace{0.1in} If $z\ =\ f(x,\ y)$, and $\Delta x$ and $\Delta y$ are increments of $x$ and $y$, then the \textbf{differentials} of the independent variables $x$ and $y$ are:
+
+\hspace{2.5in} $dx\ =\ \Delta x$ and $dy\ =\ \Delta y$
+
+\hspace{0.1in} and the \textbf{total differential} of the dependent variable $z$ is:
+
+\hspace{1.0in} $dz\ =\ \dfrac{\partial z}{\partial x}dx\ +\ \dfrac{\partial z}{\partial y}dy\ =\ f_{x}(x,\ y)dx\ +\ f_{y}(x,\ y)dy$
+
+\vspace{1.0in}
+\textbf{Chain Rule: Implicit Differentiation}
+
+\hspace{0.1in} If the equation $F(x,y)\ = 0$ defines $y$ implicitly as a differentiable function of $x$, then:
+
+\vspace{-0.3in}
+\hspace{2.0in} $\dfrac{dy}{dx}\ =\ -\dfrac{F_{x}(x,y)}{F_{y}(x,y)},\ F_{y}(x,y)\ \ne\ 0$
+
+\hspace{0.1in} If the equation $F(x,y,z)\ =\ 0$ defines $z$ implicitly as a differentiable function of $x$ and $y$, then:
+
+\hspace{1.0in} $\dfrac{\partial z}{\partial x}\ =\ -\dfrac{F_{x}(x,y,z)}{F_{z}(x,y,z)}\ \ \text{and}\ \ \dfrac{\partial z}{\partial y}\ =\ -\dfrac{F_{y}(x,y,z)}{F_{z}(x,y,z)},\ F_{z}(x,y,z)\ \ne\ 0$
+
+\textbf{Alternative Form of the Directional Derivative}
+
+\vspace{-0.2in}
+\hspace{0.1in} If $f$ is a differentiable function of $x$ and $y$, then the directional derivative of $f$ in the direction of the unit vector \textbf{u} is:
+
+\hspace{2.5in} $D_{\textbf{u}}f(x,\ y)\ =\ \nabla f(x,\ y))\ \cdot\ \textbf{u}$
+
+\vspace{-0.1in}
+\textbf{Second Partials Test}
+
+\vspace{-0.2in}
+\hspace{0.1in} Let $f$ have continuous second partial derivatives on an open region containing a point $(a,\ b)$ for which:
+
+\vspace{-0.3in}
+\hspace{2.0in} $f_{x}(a,\ b)\ =\ 0$ and $f_{y}(a,\ b)\ =\ 0$
+
+\hspace{0.1in} To test for relative extrema of $f$, consider the quantity:
+
+\hspace{2.0in} $d\ =\ f_{xx}(a,\ b)f_{yy}(a,\ b)\ -\ [f_{xy}(a,\ b)]^{2}$
+
+\hspace{0.1in} \textbf{1.}\ If $d\ >\ 0$ and $f_{xx}(a,\ b)\ >\ 0$, then $f$ has a \textbf{relative minimum} at $(a,\ b)$
+
+\hspace{0.1in} \textbf{2.}\ If $d\ >\ 0$ and $f_{xx}(a,\ b)\ <\ 0$, then $f$ has a \textbf{relative maximum} at $(a,\ b)$
+
+\hspace{0.1in} \textbf{3.}\ If $d\ <\ 0$, then $(a,\ b,\ f(a,b))$ is a \textbf{saddle point}
+
+\hspace{0.1in} \textbf{4.}\ The test is inconclusive if $d\ =\ 0$
+
+\textbf{Sum of the Squared Errors}
+
+\hspace{2.5in} $S\ =\ \displaystyle\sum^{n}_{i=1}[f(x_{i})\ -\ y_{i}]^{2}$
+
+\textbf{Least Squares Regression Line}
+
+\hspace{0.1in} The \textbf{least squares regression line} for $\{(x_{1},\ y_{1}),\ (x_{2},\ y_{2}),\ .\ .\ .\ ,\ (x_{n},\ y_{n})\}$ is given by $f(x)\ =\ ax\ +\ b$, where:
+
+\hspace{1.0in} $a\ =\ \dfrac{n\displaystyle\sum^{n}_{i=1}x_{i}y_{i}\ -\ \displaystyle\sum^{n}_{i=1}x_{i}\displaystyle\sum^{n}_{i=1}y_{i}}{n\displaystyle\sum^{n}_{i=1}x_{i}^{2}\ -\ \left(\displaystyle\sum^{n}_{i=1}x_{i}\right)^{2}}$ and $b\ =\ \dfrac{1}{n}\left(\displaystyle\sum^{n}_{i=1}y_{i}\ -\ a\displaystyle\sum^{n}_{i=1}x_{i}\right)$
+
+\textbf{Lagrange's Theorem}
+
+\hspace{0.1in} Let $f$ and $g$ have continuous first partial derivatives such that $f$ has an extremum at a point $(x_{0},\ y_{0})$ on the smooth constraint curve $g(x,\ y)\ =\ c$.  If $\nabla g(x_{0},\ y_{0})\ \neq\ \textbf{0}$, then there is a real number $\lambda$ such that:
+
+\hspace{2.0in} $\nabla f(x_{0},\ y_{0})\ =\ \lambda\nabla g(x_{0},\ y_{0})$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 15 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Definition of Mass of a Planar Lamina of Variable Density}
+
+\hspace{0.1in} If $\rho$ is a continuous density function on the lamina corresponding to a plane region $R$, then the mass $m$ of the lamina is given by:
+
+\hspace{2.0in} $m\ =\ \displaystyle\iint_{R}\rho(x,\ y)dA$, \begin{Large} variable density \end{Large}
+
+\vspace{0.5in}
+\textbf{Moments and Center of Mass of a Variable Density Planar Lamina}
+
+\hspace{0.1in} Let $\rho$ be a continuous density function on the planar lamina $R$. The \textbf{moments of mass} with respect to the $x$- and $y$-axes are:
+
+\hspace{2.5in} $M_{x}\ =\ \displaystyle\iint_{R}y\rho(x,\ y)dA$ and
+
+\hspace{2.5in} $M_{y}\ =\ \displaystyle\iint_{R}x\rho(x,\ y)dA$
+
+\hspace{0.1in} If $m$ is the mass of the lamina, then the \textbf{center of mass} is:
+
+\hspace{2.5in} $(\bar{x},\ \bar{y})\ =\ \left(\dfrac{M_{y}}{m},\ \dfrac{M_{x}}{m}\right)$
+
+\hspace{0.1in} If $R$ represents a simple plane region rather than a lamina, then the point $(\bar{x},\ \bar{y})$ is called the \textbf{centroid} of the region.
+
+\textbf{Moments of Inertia}
+
+\hspace{1.0in} $I_{x}\ =\ \displaystyle\iint_{R}(y^{2})\rho(x,\ y)dA$ and $I_{y}\ =\ \displaystyle\iint_{R}(x^{2})\rho(x,\ y)dA$
+
+\textbf{Definition of Surface Area}
+
+\hspace{0.1in} If $f$ and its first partial derivatives are continuous on the closed region $R$ in the $xy$-plane, then the \textbf{area of the surface \textit{S}} given by $z\ =\ f(x,\ y)$ over $R$ is defined as:
+
+\hspace{0.5in} $\text{Surface area}\ =\ \displaystyle\iint_{R}dS\ =\ \displaystyle\iint_{R}\sqrt{1\ +\ [f_{x}(x,\ y)]^{2}\ +\ [f_{y}(x,\ y)]^{2}}dA$
+
+\vspace{1.2in}
+\textbf{Definition of the Jacobian}
+
+\hspace{0.1in} If $x\ =\ g(u,\ v)$ and $y\ =\ h(u,\ v)$, then the \textbf{Jacobian} of $x$ and $y$ with respect to $u$ and $v$, denoted by $\partial(x,\ y)/\partial(u,\ v)$, is:
+
+\hspace{2.0in} $\dfrac{\partial(x,\ y)}{\partial(u,\ v)}\ =\ \begin{vmatrix} \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\ \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} \end{vmatrix}\ =\ \dfrac{\partial x}{\partial u}\dfrac{\partial y}{\partial v}\ -\ \dfrac{\partial y}{\partial u}\dfrac{\partial x}{\partial v}$
+
+\vspace{0.1in}
+\textbf{Change of Variables for Double Integrals}
+
+\vspace{-0.2in}
+\hspace{0.1in} Let $R$ be a vertically or horizontally simple region in the $xy$-plane, and let $S$ be a vertically or horizontally simple region in the $uv$-plane. Let $T$ from $S$ to $R$ be given by $T(u,\ v)\ =\ (x,\ y)\ =\ (g(u,v),\ h(u,v))$, where, $g$ and $h$ have continuous first partial derivatives. Assume that $T$ is one-to-one expect possibly on the boundary of $S$. If $f$ is continuous on $R$, and $\partial(x,\ y)/\partial(u,\ v)$, is nonzero on $S$,
+
+\hspace{1.0in} $\displaystyle\iint_{R}f(x,\ y)dxdy\ =\ \displaystyle\iint_{S}f(g(u,v),\ h(u,v))\left|\dfrac{\partial(x,\ y)}{\partial(u,\ v)}\right|dudv$
+
+\vspace{0.25in}
+
+\underline{\textbf{\huge Chapter 16 \phantom{ } \phantom{ } \phantom{ } \phantom{ }}}
+
+\textbf{Definition of Curl of a Vector Field}
+
+\hspace{0.1in} The curl of $\textbf{F}(x,\ y,\ z)\ =\ M\textbf{i}\ +\ N\textbf{j}\ +\ P\textbf{k}$ is:
+
+\hspace{0.2in} {\large $\text{curl}\ \textbf{F}(x,\ y,\ z)\ =\ \mathbf{\nabla}\ \times\ \textbf{F}(x,\ y,\ z)\ =\ \left(\dfrac{\partial P}{\partial y}\ -\ \dfrac{\partial N}{\partial z}\right)\textbf{i}\ -\ \left(\dfrac{\partial P}{\partial x}\ -\ \dfrac{\partial M}{\partial z}\right)\textbf{j}\ +\ \left(\dfrac{\partial N}{\partial x}\ -\ \dfrac{\partial M}{\partial y}\right)\textbf{k}$}
+
+\hspace{0.1in} If $\text{curl}\ \textbf{F}\ =\ \textbf{0}$, then \textbf{F} is said to be \textbf{irrotational}.
+
+\vspace{0.8in}
+\textbf{Test for Conservative Vector Field in Space}
+
+\vspace{-0.2in}
+\hspace{0.1in} Suppose that $M$, $N$, and $P$ have continuous first partial derivatives in an open sphere $Q$ in space.  The vector field:
+
+\hspace{2.5in} $\textbf{F}(x,\ y,\ z)\ =\ M\textbf{i}\ +\ N\textbf{j}\ +\ P\textbf{k}$
+
+\hspace{0.1in} is conservative if and only if:
+
+\vspace{-0.1in}
+\hspace{2.5in} $\text{curl}\ \textbf{F}(x,\ y,\ z)\ =\ \textbf{0}$
+
+\hspace{0.1in} That is, \textbf{F} is conservative if and only if:
+
+\hspace{1.5in} $\dfrac{\partial P}{\partial y}\ =\ \dfrac{\partial N}{\partial z},\ =\ \dfrac{\partial P}{\partial x}\ =\ \dfrac{\partial M}{\partial z},\ \text{and}\ \dfrac{\partial N}{\partial x}\ =\ \dfrac{\partial M}{\partial y}$
+
+\textbf{Definition of Divergence of a Vector Field}
+
+\hspace{0.1in} The \textbf{divergence} of $\textbf{F}(x,\ y)\ =\ M\textbf{i}\ +\ N\textbf{j}$ is:
+
+\hspace{1.0in} $\text{div}\ \textbf{F}(x,\ y)\ =\ \mathbf{\nabla}\ \cdot\ \textbf{F}(x,\ y)\ =\ \dfrac{\partial M}{\partial x}\ +\ \dfrac{\partial N}{\partial y}$, \begin{large} Plane \end{large}
+
+\hspace{0.1in} The \textbf{divergence} of $\textbf{F}(x,\ y,\ z)\ =\ M\textbf{i}\ +\ N\textbf{j}\ +\ P\textbf{k}$ is:
+
+\hspace{1.0in} $\text{div}\ \textbf{F}(x,\ y,\ z)\ =\ \mathbf{\nabla}\ \cdot\ \textbf{F}(x,\ y,\ z)\ =\ \dfrac{\partial M}{\partial x}\ +\ \dfrac{\partial N}{\partial y}\ +\ \dfrac{\partial P}{\partial z}$, \begin{large} Space \end{large}
+
+\hspace{0.1in} If $\text{div}\ \textbf{F}\ =\ 0$, then \textbf{F} is said to be \textbf{divergence free}.
+
+\textbf{Definition of the Line Integral of a Vector Field}
+
+\hspace{0.1in} Let \textbf{F} be a continuous vector field defined on a smooth curve $C$ given by:
+
+\vspace{-0.2in}
+\hspace{2.5in} $\textbf{r}(t),\ a\ \leq\ t\ \leq\ b$
+
+\hspace{0.1in} The \textbf{line integral} of \textbf{F} on $C$ is given by:
+
+\hspace{1.0in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\int_{C}\textbf{F}\ \cdot\ \textbf{T}ds\ =\ \displaystyle\int^{b}_{a}\textbf{F}(x(t),\ y(t),\ z(t))\ \cdot\ \textbf{r}'(t)dt$
+
+\textbf{Fundamental Theorem of Line Integrals}
+
+\hspace{0.1in} Let $C$ be a piecewise smooth curve lying in an open region $R$ and given by:
+
+\hspace{1.5in} $\textbf{r}(t)\ =\ x(t)\textbf{i}\ +\ y(t)\textbf{j},\ a\ \leq\ t\ \leq\ b$
+
+\hspace{0.1in} If $\textbf{F}(x,\ y)\ =\ M\textbf{i}\ +\ N\textbf{j}$ is conservative in $R$, and $M$ and $N$ are continuous in $R$, then:
+
+\hspace{1.0in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\int_{C}\nabla f\ \cdot\ d\textbf{r}\ =\ f(x(b),\ y(b))\ -\ f(x(a),\ y(a))$
+
+\hspace{0.1in} where $f$ is a potential function of $F$.  That is $\textbf{F}(x,\ y)\ =\ \nabla f(x,\ y)$
+
+\textbf{Green's Theorem}
+
+\hspace{0.1in} Let $R$ be a simply conneted region with a piecewise smooth boundary $C$, oriented counterclockwise (that is, $C$ is traversed \textit{once} so that the region $R$ always lies to the \textit{left}). If $M$ and $N$ have continuous first partial derivatives in an open region containing $R$, then:
+
+\hspace{2.0in} $\displaystyle\int_{C}Mdx\ + Ndy\ =\ \displaystyle\iint_{R}\left(\dfrac{\partial N}{\partial x}\ -\ \dfrac{\partial M}{\partial y}\right)dA$
+
+\textbf{Line Integral for Area}
+
+\hspace{0.1in} If $R$ is a plane region bounded by a piecewise smooth simple closed curve $C$, oriented counterclockwise, then the area of $R$ is given by:
+
+\hspace{2.5in} $A\ =\ \dfrac{1}{2}\displaystyle\int_{C}xdy\ -\ ydx$
+
+\vspace{1.0in}
+\textbf{Area of a Parametric Surface}
+
+\hspace{0.1in} Let $S$ be a smooth parametric surface:
+
+\hspace{1.0in} $\textbf{r}(u,\ v)\ =\ x(u,\ v)\textbf{i}\ +\ y(u,\ v)\textbf{j}\ +\ z(u,\ v)\textbf{k}$
+
+\hspace{0.1in} defined over an open region $D$ in the $uv$-plane.  If each point on the surface $S$ corresponds to exactly one point in the domain of $D$, then the \textbf{surface area} of $S$ is given by:
+
+\vspace{-0.2in}
+\hspace{1.0in} $\text{Surface area}\ =\ \displaystyle\iint_{S}dS\ =\ \displaystyle\iint_{D}\|\textbf{r}_{u}\ \times\ \textbf{r}_{v}\|dA$
+
+\hspace{0.1in} where:
+
+\vspace{-0.2in}
+\hspace{1.0in} $\textbf{r}_{u}\ =\ \dfrac{\partial x}{\partial u}\textbf{i}\ +\ \dfrac{\partial y}{\partial u}\textbf{j}\ +\ \dfrac{\partial z}{\partial u}\textbf{k}$ and $\textbf{r}_{v}\ =\ \dfrac{\partial x}{\partial v}\textbf{i}\ +\ \dfrac{\partial y}{\partial v}\textbf{j}\ +\ \dfrac{\partial z}{\partial v}\textbf{k}$
+
+\textbf{Evaluating a Surface Integral}
+
+\hspace{0.1in} Let $S$ be a surface with equation $z\ =\ g(x,\ y)$, and let $R$ be its projection onto the $xy$-plane.  If $g$, $g_{x}$, and $g_{y}$ are continuous on $R$ and $f$ is continuous on $S$, then the surface intergral of $f$ over $S$ is:
+
+\hspace{0.2in} $\displaystyle\iint_{S}f(x,\ y,\ z)dS\ =\ \displaystyle\iint_{R}f(x,\ y,\ g(x,y))\sqrt{1\ +\ [g_{x}(x,\ y)]^2\ +\ [g_{y}(x,\ y)]^{2}}dA$
+
+\textbf{Summary of Line and Surface Integrals}
+
+\hspace{0.1in} \textbf{Line Integrals}
+
+\hspace{0.2in} $ds\ =\ \|\textbf{r}'(t)\|dt\ =\ \sqrt{[x'(t)]^{2}\ +\ [y'(t)]^{2}\ +\ [z'(t)]^{2}}dt$
+
+\hspace{0.2in} $\displaystyle\int_{C}f(x,\ y,\ z)ds\ =\ \displaystyle\int^{b}_{a}f(x(t),\ y(t),\ z(t))ds$, \begin{Large} Scalar form \end{Large}
+
+\hspace{0.2in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\int_{C}\textbf{F}\ \cdot\ \textbf{T}ds\ =\ \displaystyle\int^{b}_{a}\textbf{F}(x(t),\ y(t),\ z(t))\ \cdot\ \textbf{r}'(t)dt$, \begin{Large} Vector form \end{Large}
+
+\hspace{0.1in} \textbf{Surface Integrals [$z\ =\ g(x,\ y)$]}
+
+\hspace{0.2in} $dS\ =\ \sqrt{1\ +\ [g_{x}(x,\ y)]^{2}\ +\ [g_{y}(x,\ y)]^{2}}dA$
+
+\hspace{0.2in} $\iint_{S}f(x,\ y,\ z)dS\ =\ \displaystyle\iint_{R}f(x,\ y,\ g(x,y))\sqrt{1\ +\ [g_{x}(x,\ y)]^{2}\ +\ [g_{y}(x,\ y)]^{2}}dA$, \begin{Large} Scalar form \end{Large}
+
+\hspace{0.2in} $\iint_{S}\textbf{F}\ \cdot\ \textbf{N}dS\ =\ \displaystyle\iint_{R}\textbf{F}\ \cdot\ [-g_{x}(x,\ y)\textbf{i}\ -\ g_{y}(x,\ y)\textbf{j}\ +\ \textbf{k}]dA$, \begin{Large} Vector form (upward normal) \end{Large}
+
+\hspace{0.1in} \textbf{Surface Integrals (parametric form)}
+
+\hspace{0.2in} $dS\ =\ \|\textbf{r}_{u}(u,\ v)\ \times\ \textbf{r}_{v}(u,\ v)\|dA$
+
+\hspace{0.2in} $\displaystyle\iint_{S}f(x,\ y,\ z)dS\ =\ \displaystyle\iint_{D}f(x(u,v),\ y(u,v),\ z(u,v))dS$, \begin{Large} Scalar form \end{Large}
+
+\hspace{0.2in} $\displaystyle\iint_{S}\textbf{F}\ \cdot\ \textbf{N}dS\ =\ \displaystyle\iint_{D}\textbf{F}\ \cdot\ (\textbf{r}_{u}\ \times\ \textbf{r}_{v})dA$, \begin{Large} Vector form \end{Large}
+
+\textbf{The Divergence Theorem}
+
+\hspace{0.1in} Let $Q$ be a solid region bounded by a closed surface $S$ oriented by a unit normal vector directed outward from $Q$.  If \textbf{F} is a vector field whose component functions have continuous first partial derivatives in $Q$, then:
+
+\hspace{2.5in} $\displaystyle\iint_{S}\textbf{F}\ \cdot\ \textbf{N}dS\ =\ \displaystyle\iiint_{Q}\text{div}\ \textbf{F}dV$
+
+\vspace{2.0in}
+\textbf{Stoke's Theorem}
+
+\hspace{0.1in} Let $S$ be an oriented surface with unit normal vector \textbf{N}, bounded by a piecewise smooth simple closed curve $C$ with a positive orientation.  If \textbf{F} is a vector field whose component functions have continuous first partial derivatives on an open region containing $S$ and $C$, then:
+
+\hspace{2.5in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\iint_{S}(\text{curl}\ \textbf{F})\ \cdot\ \textbf{N}dS$
+
+\textbf{Summary of Integration Formulas}
+
+\vspace{-0.2in}
+\hspace{0.1in} \textbf{Fundamental Theorem of Calculus}
+
+\hspace{1.5in} $\displaystyle\int^{b}_{a}F'(x)dx\ =\ F(b)\ -\ F(a)$
+
+\hspace{0.1in} \textbf{Fundamental Theorem of Line Integrals}
+
+\hspace{1.0in} $\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\int_{C}\nabla f\ \cdot\ d\textbf{r}\ =\ f(x(b),\ y(b))\ -\ f(x(a),\ y(a))$
+
+\hspace{0.1in} \textbf{Green's Theorem}
+
+\hspace{0.2in} {\large$\int_{C}Mdx\ +\ Ndy\ =\ \displaystyle\iint_{R}\left(\dfrac{\partial N}{\partial x}\ -\ \dfrac{\partial M}{\partial y}\right)dA\ =\ \displaystyle\int_{C}\textbf{F}\ \cdot\ \textbf{T}ds\ =\ \displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\iint_{R}(\text{curl}\ \textbf{F})\ \cdot\ \textbf{k}dA$}
+
+\hspace{0.2in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ \textbf{N}ds\ =\ \displaystyle\iint_{R}\text{div}\ \textbf{F}dA$
+
+\hspace{0.1in} \textbf{Divergence Theorem}
+
+\hspace{2.5in} $\displaystyle\iint_{S}\textbf{F}\ \cdot\ \textbf{N}dS\ =\ \displaystyle\iiint_{Q}\text{div}\ \textbf{F}dV$
+
+\hspace{0.1in} \textbf{Stoke's Theorem}
+
+\hspace{2.5in} $\displaystyle\int_{C}\textbf{F}\ \cdot\ d\textbf{r}\ =\ \displaystyle\iint_{S}(\text{curl}\ \textbf{F})\ \cdot\ \textbf{N}dS$
+
+\newpage
+
+\end{large}
+
+\end{document}
